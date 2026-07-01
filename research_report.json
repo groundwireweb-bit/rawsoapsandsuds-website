@@ -1,0 +1,139 @@
+{
+  "industry": {
+    "name": "Handmade artisan bar-soap maker (cold/traditional saponified soap), single-maker, local-pickup only",
+    "category": "Artisan / handmade physical goods — small local maker (retail product business, not a service trade; not full e-commerce)",
+    "notes": "Single owner-maker (Jelisha) producing five essential-oil bar soaps from one shared coconut-oil + shea-butter base, sold only by local pickup in Johnson County, Texas. No shipping, no online checkout, no cart. The site is a catalog-plus-trust brochure whose entire job is to route an interested local buyer to a mailto/tel order. Two defining industry traits drive everything: (1) the product is consumable and skin-contact, so ingredient transparency and allergen/lye reassurance are central trust drivers, not nice-to-haves; (2) it is hyper-local pickup-only, so local discoverability and a frictionless contact path matter far more than conversion-funnel polish. Treat this as closer to a farmers'-market maker's table than to a Shopify soap brand."
+  },
+
+  "recommended_pages": [
+    { "name": "Home", "status": "client-requested", "reason": "Wordmark, tagline, one ingredient/process line, and a 'Shop the Soaps' button. Standard and sufficient as the entry point." },
+    { "name": "Shop", "status": "client-requested", "reason": "The five soaps as a card grid with name, SVG graphic, draft description, and shared pricing. This is the product catalog; for a no-cart maker it doubles as the 'Products' page." },
+    { "name": "Ingredients & Allergens", "status": "client-requested", "reason": "Industry-critical for skin-contact handmade soap. Carries the lye/saponification reassurance and the essential-oil sensitivity note — the two stated customer objections. Keep it." },
+    { "name": "Contact", "status": "client-requested", "reason": "mailto/tel, service-area, and the 3-step ordering sequence. For a pickup-only maker this is the conversion page and must be effortless." },
+    { "name": "About / maker story", "status": "deliberately excluded by client — DO NOT BUILD", "reason": "For handmade goods an About/maker-story page is normally a strong trust driver and would usually be recommended. The brief explicitly forbids inventing a personal narrative and says there is NO About page. Flagging the convention only; respect the client and do not build it or smuggle a story into Home." },
+    { "name": "FAQ", "status": "optional / fold-in, not a new page", "reason": "The brief lists five real customer questions (lye, ingredients, price, how to order, shipping). These are best answered inline on Ingredients & Allergens, Shop, and Contact rather than as a separate page, keeping the site at the requested four pages. Could also support FAQPage schema." }
+  ],
+
+  "recommended_features": [
+    { "name": "Mobile nav toggle", "status": "client-requested", "reason": "Most visitors arrive on a phone; a simple accessible hamburger toggle is expected." },
+    { "name": "mailto: and tel: CTAs throughout", "status": "client-requested", "reason": "These replace add-to-cart everywhere. Repeat them on Home, Shop, and Contact." },
+    { "name": "Click-to-call / click-to-email that pre-fill subject or body", "status": "recommended enhancement", "reason": "A mailto: link with a prefilled subject like 'Soap order' lowers friction and helps Jelisha triage orders. Phone is a placeholder for now — wire tel: once the real number exists." },
+    { "name": "Pricing stated once, prominently, near top of Shop", "status": "recommended (matches brief)", "reason": "Shared flat pricing ($4/bar, 3 for $10) removes the most common purchase hesitation up front." },
+    { "name": "Per-product illustrated SVG with swap-in comment markers", "status": "client-requested", "reason": "Custom inline SVGs per scent in brand palette; comment each so a real photo drops in later without restructuring." },
+    { "name": "prefers-reduced-motion-respecting hover on product cards only", "status": "client-requested", "reason": "One subtle hover affordance; no scroll/page-load animation." }
+  ],
+
+  "standard_ctas": [
+    "Email or call Jelisha to order (the brief's primary CTA — use verbatim or close)",
+    "Shop the Soaps (Home → Shop)",
+    "Email Jelisha to place an order",
+    "Call Jelisha to arrange pickup",
+    "Have an allergy question? Email before you order",
+    "Pick your scents — email or call to reserve"
+  ],
+
+  "trust_signals": [
+    "Full, plain-language ingredient disclosure (coconut oil, shea butter, lye/sodium hydroxide, essential oils) — the #1 trust driver for skin-contact handmade soap",
+    "Clear, honest lye/saponification explanation: lye reacts completely during saponification and no active lye remains in the cured bar (directly answers the top stated objection)",
+    "Up-front allergen transparency: essential oils are a common sensitivity; invitation to ask before ordering",
+    "Transparent flat pricing shown without requiring contact ($4/bar, 3 for $10)",
+    "Real, named local maker identity (Jelisha) and a real service area (Johnson County, TX) — local + human is the credibility anchor for a maker",
+    "Genuine reachable contact: real email now, clearly-marked phone placeholder until the number is added",
+    "Small-batch / handmade framing backed by the specific shared base, not vague 'artisan' claims",
+    "NOTE: no testimonials, reviews, certifications, awards, or years-in-business were provided — do NOT fabricate any. Honesty and specificity are the trust strategy here."
+  ],
+
+  "common_sections": [
+    "Hero with wordmark + tagline + primary action (Shop / order)",
+    "Product/scent grid (cards)",
+    "Ingredients / 'what it's made of' explainer",
+    "Allergen & safety reassurance (soap-specific)",
+    "How to order / pickup steps (replaces checkout for a no-cart maker)",
+    "Pricing callout",
+    "Contact block with email, phone, and service area",
+    "Short 'how it's made / small-batch' line (one line on Home per brief — NOT a full story section)"
+  ],
+
+  "copy_tone": {
+    "formality": "Casual but clear and grounded — first-person-friendly, plain-spoken, like a maker talking honestly across a market table. Not corporate, not luxury-boutique, not faux-folksy.",
+    "emotion": "Warm, calm, reassuring, quietly confident. The dominant job is to put a cautious buyer at ease about ingredients and allergens while keeping the soaps appealing and a little playful (especially 'Eat Me').",
+    "keywords_to_use": [
+      "handmade",
+      "small-batch",
+      "coconut oil",
+      "shea butter",
+      "essential oils",
+      "saponified / saponification",
+      "cured",
+      "Johnson County, Texas",
+      "local pickup",
+      "made the slow way",
+      "mix and match"
+    ],
+    "keywords_to_avoid": [
+      "all anti-slop filler and empty superlatives (best-in-class, world-class, top-notch, etc.)",
+      "buzzwords (seamless, leverage, elevate, curated luxury experience, etc.)",
+      "faux-humble openers ('At Raw Soaps and Suds, we believe...')",
+      "generic CTAs ('Learn more', 'Click here', 'Get started')",
+      "'chemical-free' or 'no chemicals' — inaccurate and undercuts the honest lye explanation (soap IS chemistry)",
+      "health/medical/therapeutic claims ('detox', 'cures', 'heals', 'antibacterial', 'cleanses toxins') — unsubstantiated and a liability",
+      "'lye-free' — false; the correct, trust-building framing is that no ACTIVE lye remains after curing",
+      "'100% natural' / 'pure' absolutes not backed by the actual ingredient list",
+      "luxury/spa clichés that clash with the rustic, kraft-paper, small-maker identity"
+    ]
+  },
+
+  "competitor_observations": [
+    "Client listed no competitors, so these are general handmade-soap-maker observations, not data about specific sites.",
+    "Typical artisan-soap sites lean heavily on warm cream backgrounds, high-contrast serif type, and terracotta/botanical-green accents — the exact 'AI-default handmade' look the client explicitly wants to avoid. The bluebonnet-blue + kraft direction is a genuine differentiator in this category; lean into it.",
+    "Most competitors are full e-commerce (cart, shipping). A pickup-only, contact-to-order maker is rarer online; the opportunity is to make ordering feel personal and frictionless rather than apologizing for the missing cart.",
+    "Common competitor weakness: ingredient and lye information is buried or vague. Putting clear, confident ingredient + lye + allergen content front-and-center is an easy credibility win here.",
+    "Common competitor weakness: scent descriptions are interchangeable purple prose. Specific, sensory, honest one-liners (and the playful 'Eat Me') will read as more authentic.",
+    "Many small-maker sites hide price behind contact. Showing the flat $4 / 3-for-$10 pricing openly removes friction and signals honesty."
+  ],
+
+  "color_psychology": {
+    "recommended_primaries": [
+      "Client's Bluebonnet blue #3E4C76 (primary) — calm, clean, trustworthy, gentle-on-skin connotations; reads as natural-but-fresh and supports the 'safe/reassuring' goal",
+      "Client's Dusty sky blue #8294B8 (secondary) — softens the palette, good for backgrounds/secondary UI"
+    ],
+    "recommended_accents": [
+      "Client's Kraft paper tan #B8915E — earthy, ties to real soap-packaging materials (kraft/twine/stamp); use sparingly for labels, dividers, the badge, and icon detail as the client specified"
+    ],
+    "colors_to_avoid": [
+      "Warm cream backgrounds + high-contrast serif + terracotta accents (the AI-default handmade look the client explicitly rejects)",
+      "Pure black for body text (client specifies deep indigo-charcoal #2B2F3D instead)",
+      "Neon, candy, or synthetic-looking hues that would undercut the 'natural/handmade' message",
+      "Heavy botanical/sage-green dominance — would pull the brand back toward the generic artisan-soap norm the client is differentiating away from"
+    ],
+    "reasoning": "Blue is an unconventional lead color for handmade soap (the category norm is green/botanical or cream/terracotta), but here that is an asset, not a problem: it is anchored in the Texas bluebonnet, directly supports the stated differentiator, and avoids the AI-default look. Blue also psychologically reads as clean, calm, and trustworthy, which reinforces the central ingredient/lye-reassurance job. The kraft tan accent supplies the warmth and 'handmade materials' texture that blue alone would lack. The palette is internally coherent and well-matched to the brand goals — no concern to flag. Design system is law: these are the client's chosen colors and must not be overridden; this is supportive context only."
+  },
+
+  "layout_conventions": {
+    "hero_style": "Modest, content-first hero — text wordmark + one tagline + a single clear 'Shop the Soaps' button and one short ingredient/process line. No large stock photo (none exist); the optional stamped badge is the one bold visual moment. Mobile-first.",
+    "nav_style": "Simple top nav across four pages (Home, Shop, Ingredients & Allergens, Contact) with an accessible mobile hamburger toggle. A sticky header is fine but optional; unlike a trades site, a persistent sticky phone bar is not required — but the email/phone CTA should be easy to reach on every page.",
+    "footer_style": "Compact footer repeating email, phone (placeholder), service area (Johnson County, TX — local pickup only), and nav links. No newsletter signup, no social unless provided (none were).",
+    "notes": "Structurally this is a small brochure/catalog site: hero → scent grid → ingredient/allergen trust content → ordering steps/contact. The product grid (cards in a responsive grid, NOT numbered 01/02/03) is the structural centerpiece. Repeat the order CTA on Home, Shop, and Contact since there is no cart anywhere. Keep motion minimal (card hover only) and honor prefers-reduced-motion. Accessibility floor per brief: real alt/SVG titles, contrast, visible focus states."
+  },
+
+  "seo_notes": {
+    "primary_keywords": [
+      "handmade soap Johnson County Texas",
+      "natural soap Johnson County TX",
+      "handmade bar soap near me / local pickup",
+      "essential oil soap Texas",
+      "coconut oil shea butter soap",
+      "small-batch handmade soap Texas",
+      "Cleburne / Burleson handmade soap (nearby Johnson County towns, if accurate)",
+      "buy handmade soap local pickup Johnson County"
+    ],
+    "local_seo_important": true,
+    "schema_types": [
+      "LocalBusiness (maker with Johnson County, TX service area; areaServed rather than a published street address)",
+      "Product (one per scent — name, description, image/SVG, brand; include price $4 with the 3-for-$10 noted in description)",
+      "Offer (optional, attached to Product, with price and availability; note there is NO online purchase — point of sale is contact/pickup, so omit purchase URLs)",
+      "FAQPage (for the lye / ingredients / price / how-to-order / shipping questions, if surfaced as Q&A)",
+      "BreadcrumbList (optional, minor for a 4-page site)"
+    ]
+  }
+}

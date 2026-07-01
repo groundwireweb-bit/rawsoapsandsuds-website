@@ -1,0 +1,337 @@
+{
+  "$schema_note": "Self-contained build spec + baton-method workflow for Raw Soaps and Suds static website. Designed for a SINGLE agent whose memory is cleared between handoffs. Each baton phase is fully self-contained: it restates everything needed so the agent never needs prior conversation context. Read 'baton_method' first, then execute phases in order. All source-of-truth content lives in 'brief'.",
+
+  "meta": {
+    "document_title": "Raw Soaps and Suds — Website Build Brief",
+    "purpose": "Convert the full website brief into a structured, machine-usable spec and an autonomous baton-method workflow.",
+    "source_authority": "All values reflect confirmed answers from the business owner, not guesses. Follow closely. Where genuinely open, make a reasonable, on-brand call rather than stalling.",
+    "stakes": "Small, low-stakes site.",
+    "intervention_required": "none — the workflow is designed so a single agent can complete the entire build end-to-end with no human input."
+  },
+
+  "baton_method": {
+    "what_this_is": "A relay where one agent completes one phase, hands off a written state summary, then has its memory cleared before starting the next phase. Because memory does not persist, every phase below repeats the global context it needs and never assumes the agent remembers earlier phases.",
+    "operating_rules": [
+      "Always read 'global_context_for_every_phase' at the start of EVERY phase, regardless of which phase you are on. Treat it as if you have never seen this project before.",
+      "All factual content (copy, palette, fonts, products, contact info) comes ONLY from the 'brief' object in this JSON. Do not invent business facts.",
+      "After finishing a phase, write your handoff into the matching entry under 'handoff_log' (append, do not overwrite prior entries) so the next memory-cleared instance can verify what exists.",
+      "Before declaring a phase complete, run that phase's 'exit_checklist'. Do not advance until every item passes.",
+      "Do NOT add features outside scope: no shopping cart, no checkout, no payment, no backend, no database, no contact form, no shipping.",
+      "Preserve placeholder markers exactly as specified so a non-developer can find and swap them later."
+    ],
+    "global_context_for_every_phase": {
+      "project": "Static, multi-page marketing website for a handmade soap business. No e-commerce. The entire job of the site is to present the soaps, build ingredient trust, and make it effortless to email or call the owner to place an order for local pickup.",
+      "tech_constraints": "Plain HTML/CSS. Light JavaScript ONLY if needed for tiny interactions (e.g. mobile nav toggle). No framework, no build step. Must drag-and-drop onto a static host (GitHub Pages, Netlify). Four pages share ONE stylesheet. Mobile-first, fully responsive. No backend, no database. All content hardcoded in HTML.",
+      "pages": ["Home (index.html)", "Shop (shop.html)", "Ingredients & Allergens (ingredients.html)", "Contact (contact.html)"],
+      "quality_floor": "Visible keyboard focus states; sufficient color contrast; respect prefers-reduced-motion; real alt text on every graphic.",
+      "owner_naming_rule": "Refer to owner as 'Jelisha' — FIRST NAME ONLY. No last name anywhere on the site.",
+      "do_not_invent": "There is no About/story page. Do not invent a personal narrative or backstory."
+    },
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Foundation & shared assets",
+        "goal": "Establish the project skeleton, the single shared stylesheet (design tokens, typography, base/responsive styles, focus + reduced-motion handling), the HTML/CSS/SVG wordmark, and the stamped-badge motif. Produce the shared header/footer markup that every page will reuse.",
+        "produce": [
+          "Folder structure ready for a static host.",
+          "styles.css containing: CSS custom properties for the full palette; Google Fonts import for the chosen display + body fonts; mobile-first base styles; responsive breakpoints; product-card hover state; visible :focus-visible styles; a @media (prefers-reduced-motion: reduce) block.",
+          "Reusable header (wordmark + nav) and footer (email + phone persistent) markup, documented so phase 2 can paste it identically into each page.",
+          "The text wordmark 'Raw Soaps and Suds' in the display font, built in HTML/CSS or inline SVG (NOT a locked image).",
+          "The stamped circular badge motif (wax-seal / maker's-mark style) with a bluebonnet sprig or soap-bar icon, as inline SVG, reusable on the logo and product cards."
+        ],
+        "exit_checklist": [
+          "styles.css defines every palette color as a CSS variable.",
+          "Display font used sparingly (logo + page headers only); body font is the clean sans-serif.",
+          "Focus states are visible on keyboard navigation.",
+          "prefers-reduced-motion is respected (animations/transitions disabled or reduced).",
+          "Wordmark and badge are code-based (HTML/CSS/SVG), not image files.",
+          "Header/footer markup is documented for reuse with email and phone persistent in the footer."
+        ],
+        "handoff_must_state": "Exact file paths created, the final chosen display + body font names, the exact reusable header/footer HTML block, and the badge SVG location/ID so the next instance can reference it without guessing."
+      },
+      {
+        "phase": 2,
+        "name": "Page builds — Home, Ingredients, Contact",
+        "goal": "Build the three text-driven pages using the shared stylesheet, header, and footer from phase 1. (Shop is phase 3 because of the SVG product graphics.)",
+        "depends_on": "Phase 1 outputs. Re-read phase 1's handoff_log entry for the exact header/footer block and font choices.",
+        "produce": [
+          "index.html (Home): wordmark, tagline, prominent 'Shop the Soaps' button linking to shop.html, ONE short line about ingredients/process, email + phone visible in footer. No invented About story.",
+          "ingredients.html (Ingredients & Allergens): shared base explanation, saponification reassurance, essential-oil sensitivity note directing allergy-prone visitors to contact Jelisha first.",
+          "contact.html (Contact): mailto link, phone placeholder clearly marked, service area + local-pickup note, and the ordering steps as a real numbered list (1-2-3)."
+        ],
+        "exit_checklist": [
+          "All three pages link the shared styles.css and reuse the identical header/footer.",
+          "Tagline present on Home; 'Shop the Soaps' button links to shop.html.",
+          "Phone number rendered as the clearly-marked placeholder, not a real number.",
+          "Contact ordering steps are a numbered sequence; Ingredients allergen note present.",
+          "Email is a working mailto: link; phone (once real) would be a tel: link — placeholder marked so it's a one-line swap.",
+          "No contact form, no cart, no invented backstory."
+        ],
+        "handoff_must_state": "Which pages are complete, confirmation the shared header/footer were reused verbatim, and any on-brand calls made for genuinely-open copy."
+      },
+      {
+        "phase": 3,
+        "name": "Shop page + five product SVGs",
+        "goal": "Build shop.html with all five scents as cards in a grid, each with a distinct inline-SVG placeholder graphic, plus the single clearly-stated price and a prominent email/call CTA.",
+        "depends_on": "Phases 1 & 2 outputs. Re-read their handoff_log entries for tokens, badge motif, header/footer.",
+        "produce": [
+          "shop.html with a non-numbered card grid (do NOT label 01/02/03 — they are not a sequence).",
+          "Price stated ONCE clearly near the top: '$4 per bar, or 3 for $10 — mix and match scents.'",
+          "Five inline-SVG soap graphics in the palette, each visually distinct (mango slice, blossom sprig, apple, patchouli/earthy, and a playful mark for 'Eat Me').",
+          "Each SVG marked with a code comment like <!-- REPLACE WITH REAL PHOTO: mango-madness.jpg --> so swapping real photos later is one step.",
+          "Each card: name, graphic, one-line draft description, and the price context. Prominent 'email or call Jelisha to order' CTA repeated (no add-to-cart anywhere)."
+        ],
+        "exit_checklist": [
+          "Five cards present, not numbered as a sequence.",
+          "Price appears once clearly near the top of the page.",
+          "Each SVG is visually distinct and has real alt text / accessible labeling.",
+          "Each SVG has its REPLACE-WITH-REAL-PHOTO comment.",
+          "Order CTA (mailto/tel) is prominent; no cart/checkout.",
+          "Page reuses shared styles.css, header, footer."
+        ],
+        "handoff_must_state": "Confirmation all five cards exist with distinct graphics and replace-photo comments, and that pricing appears once near the top."
+      },
+      {
+        "phase": 4,
+        "name": "Audit, accessibility & handoff packaging",
+        "goal": "Final pass across all four pages for accessibility, responsiveness, scope discipline, and placeholder correctness; then package the site for delivery.",
+        "depends_on": "All prior phases. Re-read every handoff_log entry.",
+        "produce": [
+          "Cross-page audit confirming the quality floor on every page (focus states, contrast, reduced-motion, alt text).",
+          "Responsiveness verification at mobile and desktop widths.",
+          "Scope verification: no cart/checkout/payment/backend/database/contact-form/shipping anywhere.",
+          "Placeholder verification: phone placeholder, photo-swap comments, wordmark-as-code, mood-based descriptions all present and clearly findable.",
+          "Final delivery: present all files to the user."
+        ],
+        "exit_checklist": [
+          "All four pages share one stylesheet and identical header/footer.",
+          "Every graphic has real alt text; contrast and focus states pass; reduced-motion respected.",
+          "All four placeholder categories (phone, photos, logo, descriptions) are present and clearly marked.",
+          "Owner referenced as 'Jelisha' first-name-only everywhere; service area Johnson County, TX; pickup-only, no shipping.",
+          "Site is a clean drag-and-drop static bundle."
+        ],
+        "handoff_must_state": "Final pass/fail per checklist item and the list of delivered files."
+      }
+    ],
+    "handoff_log": {
+      "_instructions": "Each memory-cleared instance appends its completion summary here keyed by phase number, e.g. 'phase_1': { files: [...], fonts: {...}, notes: '...' }. Leave empty until executed.",
+      "phase_1": null,
+      "phase_2": null,
+      "phase_3": null,
+      "phase_4": null
+    }
+  },
+
+  "brief": {
+    "project_overview": {
+      "business": "Raw Soaps and Suds",
+      "owner": "Jelisha",
+      "location": "Johnson County, Texas",
+      "what_they_sell": "Five handmade soap scents and nothing else right now.",
+      "site_job": "Present the soaps well, build trust around the ingredients, and make it effortless for a visitor to email or call Jelisha to place an order for local pickup.",
+      "commerce_model": "No shopping cart or payment processing. Local pickup only. No shipping."
+    },
+
+    "tech_and_build": {
+      "type": "Static, multi-page site.",
+      "stack": "Plain HTML/CSS, with light JavaScript only if needed for small interactions like a mobile nav toggle.",
+      "no_framework_or_build_step": true,
+      "hostability": "Simple enough to drag-and-drop onto a static host (GitHub Pages, Netlify, etc.) later.",
+      "shared_stylesheet": "Four pages share one stylesheet.",
+      "pages": ["Home", "Shop", "Ingredients & Allergens", "Contact"],
+      "responsive": "Build mobile-first and fully responsive; most visitors will likely land on a phone.",
+      "quality_floor": [
+        "Visible keyboard focus states",
+        "Sufficient color contrast",
+        "Respect for prefers-reduced-motion"
+      ]
+    },
+
+    "brand_foundation": {
+      "business_name": "Raw Soaps and Suds",
+      "owner_reference": "Jelisha — first name only, no last name anywhere on the site.",
+      "service_area": "Johnson County, Texas — local pickup / in-person only, no shipping.",
+      "email": "jelishayork439@gmail.com",
+      "phone": {
+        "status": "not yet available",
+        "see": "placeholders.phone_number"
+      },
+      "tagline": {
+        "instruction": "Pick one or propose something close.",
+        "options": [
+          "Small-batch soap, handmade in Johnson County, Texas.",
+          "Handmade soap, made the slow way, right here in Johnson County."
+        ]
+      }
+    },
+
+    "visual_design": {
+      "grounding_concept": {
+        "summary": "'Primarily blue' and 'rustic & handmade' should point somewhere specific, not generic coastal-cottage or farmhouse.",
+        "anchor_blue_in": "Texas bluebonnets — the state's iconic wildflower.",
+        "anchor_handmade_in": "Real materials of soap packaging: kraft paper, twine, hand-stamped labels.",
+        "avoid": "The common AI-default look of a warm cream background with a high-contrast serif and a terracotta accent — that's not this brand."
+      },
+      "palette": {
+        "instruction": "Adjust as needed, but stay in this family.",
+        "colors": [
+          { "role": "primary", "name": "Bluebonnet blue", "hex": "#3E4C76" },
+          { "role": "secondary", "name": "Dusty sky blue", "hex": "#8294B8" },
+          { "role": "accent", "name": "Kraft paper tan", "hex": "#B8915E", "usage": "Use sparingly for labels, dividers, icon details." },
+          { "role": "background", "name": "Pale blue-white (not warm cream)", "hex": "#EEF1F5" },
+          { "role": "body_text", "name": "Deep indigo-charcoal (not pure black)", "hex": "#2B2F3D" }
+        ]
+      },
+      "typography": {
+        "approach": "Pair a characterful, label-like display face — used sparingly, just the logo and page headers — with a clean, restrained sans-serif for body copy.",
+        "display_suggestions": ["Yeseva One", "Bitter (semibold/black weight)"],
+        "body_suggestions": ["Karla", "Work Sans"],
+        "fonts_are": "All free Google Fonts.",
+        "avoid": "The overused high-contrast-serif-on-cream pairing."
+      },
+      "texture_and_signature_element": {
+        "lean_on": "Materials a soap-maker would actually use.",
+        "signature": "A stamped circular badge — think wax seal or maker's mark — featuring a simple bluebonnet sprig or soap-bar icon.",
+        "use_as": "A recurring motif for the logo and product cards.",
+        "design_principle": "Spend the design's one moment of boldness there, and keep everything around it quiet and disciplined."
+      },
+      "motion": {
+        "principle": "Minimal and purposeful.",
+        "allowed": "A subtle hover state on product cards.",
+        "skip": "Heavy scroll animations or page-load sequences — they read as generic rather than handmade."
+      },
+      "logo": {
+        "status": "No real logo exists yet.",
+        "build": "A simple text-based wordmark ('Raw Soaps and Suds') in the display font, optionally paired with the stamped badge motif.",
+        "format": "Build it in HTML/CSS or inline SVG rather than as a locked image file, so it's easy to refine later."
+      }
+    },
+
+    "site_structure": {
+      "home": {
+        "elements": [
+          "Wordmark, tagline, and a clear 'Shop the Soaps' button linking to the Shop page.",
+          "One short line about the ingredients/process (see products for draft copy).",
+          "Keep email and phone visible somewhere persistent (e.g. footer), since contacting Jelisha is the entire path to purchase."
+        ],
+        "constraint": "There's no About/story page, so don't invent a personal narrative here."
+      },
+      "shop": {
+        "elements": [
+          "All five scents as cards in a grid.",
+          "Each card: name, a placeholder illustrated graphic, one-line draft description, and the price.",
+          "State the price once clearly near the top of the page since it's identical across all scents: '$4 per bar, or 3 for $10 — mix and match scents.'",
+          "Repeat the 'email or call Jelisha to order' call-to-action prominently, since there's no add-to-cart button anywhere."
+        ],
+        "constraint": "They're not a sequence, so don't number them 01/02/03."
+      },
+      "ingredients_and_allergens": {
+        "shared_base": "All bars share the same base: coconut oil and shea butter, saponified with lye (sodium hydroxide), scented with essential oils.",
+        "saponification_reassurance": "Explain, briefly and reassuringly, that as with all traditional handmade soap, the lye reacts completely with the oils during saponification — once the bars are cured, no active lye remains in the finished soap.",
+        "allergen_note": "Note that essential oils are a common sensitivity for some people, and anyone with known fragrance/essential-oil allergies should reach out to Jelisha before ordering."
+      },
+      "contact": {
+        "elements": [
+          "Email (mailto: link).",
+          "Phone (placeholder, clearly marked).",
+          "Service area: Johnson County, TX, local pickup/in-person only."
+        ],
+        "ordering_steps": {
+          "note": "Include the ordering steps as a real numbered sequence (this one earns numbering).",
+          "steps": [
+            "Email or call Jelisha with the scent(s) and quantity wanted.",
+            "She confirms availability and total.",
+            "You arrange a pickup time and location."
+          ]
+        }
+      }
+    },
+
+    "products": {
+      "pricing": {
+        "statement": "$4 for one bar, or 3 bars for $10.",
+        "same_across_all": true
+      },
+      "description_disclaimer": "The descriptions below are mood-based placeholders, not confirmed scent notes. Jelisha should personalize these before launch. 'Eat Me' especially needs her input, since the name doesn't hint at an obvious scent family the way the others do.",
+      "scents": [
+        {
+          "name": "Mango Madness",
+          "draft_description": "Bright and juicy, like ripe mango in the height of summer.",
+          "svg_detail_hint": "A small mango-slice detail.",
+          "photo_placeholder_comment": "<!-- REPLACE WITH REAL PHOTO: mango-madness.jpg -->"
+        },
+        {
+          "name": "Cherry Blossom",
+          "draft_description": "Soft, floral, and a little sweet — like spring in bloom.",
+          "svg_detail_hint": "A blossom sprig.",
+          "photo_placeholder_comment": "<!-- REPLACE WITH REAL PHOTO: cherry-blossom.jpg -->"
+        },
+        {
+          "name": "Apple Fantasy",
+          "draft_description": "Crisp and sweet, like fresh-picked orchard apples.",
+          "svg_detail_hint": "An apple detail.",
+          "photo_placeholder_comment": "<!-- REPLACE WITH REAL PHOTO: apple-fantasy.jpg -->"
+        },
+        {
+          "name": "Perfect Patchouli",
+          "draft_description": "Warm, earthy, and grounding — patchouli done right.",
+          "svg_detail_hint": "An earthy / patchouli leaf detail.",
+          "photo_placeholder_comment": "<!-- REPLACE WITH REAL PHOTO: perfect-patchouli.jpg -->"
+        },
+        {
+          "name": "Eat Me",
+          "draft_description": "Playful and a little mischievous — Jelisha to fill in real notes here.",
+          "svg_detail_hint": "A playful / mischievous mark (no obvious scent family — keep it distinct and whimsical).",
+          "photo_placeholder_comment": "<!-- REPLACE WITH REAL PHOTO: eat-me.jpg -->"
+        }
+      ],
+      "imagery": {
+        "status": "No product photos exist yet.",
+        "build": "Charming, simple placeholder graphics — illustrated soap-bar icons in the palette, one per scent, each visually distinct so they're easy to tell apart at a glance.",
+        "format": "Build these as inline SVG.",
+        "swap_marker": "Mark each clearly in code comments (e.g. <!-- REPLACE WITH REAL PHOTO: mango-madness.jpg -->) so swapping in real photography later is a one-step job, not a restructure."
+      }
+    },
+
+    "functional_requirements": {
+      "no_ecommerce": "No shopping cart, checkout, or payment processing — none of that belongs on this site.",
+      "primary_ctas": "mailto: and tel: links throughout, NOT a contact form (a working form would need a backend or third-party service, which isn't necessary here).",
+      "responsive": "Fully responsive and mobile-first.",
+      "performance": "Fast-loading, no heavy dependencies.",
+      "accessibility": [
+        "Real alt text on every graphic",
+        "Sufficient color contrast",
+        "Visible focus states",
+        "Motion that respects reduced-motion settings"
+      ],
+      "no_backend_no_database": "All content is hardcoded directly into the HTML."
+    },
+
+    "placeholders_and_followups": {
+      "note": "A few things are intentionally incomplete and should be easy for a non-developer to find and update later.",
+      "items": [
+        {
+          "item": "Phone number",
+          "status": "Not yet available.",
+          "marker": "[PHONE NUMBER — Jelisha to add]",
+          "location": "Mark it clearly in the Contact page code so it's a one-line swap."
+        },
+        {
+          "item": "Product photography",
+          "status": "None yet; using illustrated placeholders.",
+          "instruction": "Structure the code so real photos drop in without restructuring."
+        },
+        {
+          "item": "Logo",
+          "status": "Placeholder text-based wordmark for now.",
+          "instruction": "Keep it HTML/CSS/SVG rather than a locked image file so it's easy to refine later."
+        },
+        {
+          "item": "Product descriptions",
+          "status": "Mood-based placeholders.",
+          "instruction": "Jelisha should personalize all five, especially 'Eat Me.'"
+        }
+      ]
+    }
+  }
+}

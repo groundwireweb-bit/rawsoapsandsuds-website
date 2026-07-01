@@ -1,0 +1,40 @@
+<!-- ==========================================================================
+     Form input component — Raw Soaps and Suds
+     Built by Agent 05. Styles live in globals/styles.css (.field / .input).
+
+     IMPORTANT: This site has NO working contact form — a backend is out of
+     scope, and ordering is by mailto/tel only. These input styles are provided
+     as shared primitives for completeness and any future backed-up form. Page
+     agents must NOT build a submit form on the Contact page.
+
+     Every input has a visible <label> tied via for/id (accessibility rule).
+
+     Parts:   .field  .field__label  .input  .field__hint
+     States:  .input--error
+     ========================================================================== -->
+
+<!-- Single-line text input with a visible label -->
+<div class="field">
+  <label class="field__label" for="example-name">Your name</label>
+  <input class="input" id="example-name" name="name" type="text" placeholder="Jane Doe" />
+</div>
+
+<!-- Email input with a hint line -->
+<div class="field">
+  <label class="field__label" for="example-email">Email</label>
+  <input class="input" id="example-email" name="email" type="email" placeholder="you@example.com" />
+  <p class="field__hint">We only use this to confirm your pickup.</p>
+</div>
+
+<!-- Multi-line textarea -->
+<div class="field">
+  <label class="field__label" for="example-message">Which scents?</label>
+  <textarea class="input" id="example-message" name="message" rows="4" placeholder="e.g. Mango Madness x2, Cherry Blossom x1"></textarea>
+</div>
+
+<!-- Error state -->
+<div class="field">
+  <label class="field__label" for="example-error">Email</label>
+  <input class="input input--error" id="example-error" name="email" type="email" aria-invalid="true" />
+  <p class="field__hint">Please enter a valid email address.</p>
+</div>

@@ -1,0 +1,193 @@
+{
+  "checked_at": "2026-06-30T02:10:00Z",
+  "total_issues_found": 13,
+  "total_issues_fixed": 8,
+  "remaining_issues": [
+    {
+      "file": "contact.html",
+      "line": 205,
+      "description": "Phone number is the placeholder \"[PHONE NUMBER — Jelisha to add]\" and the tel: link is empty (href=\"tel:\") in the contact methods block and in the footer of every page. Jelisha must supply a real number; then fill both the visible text and the tel: href (e.g. tel:+18175551234). Clearly comment-marked already. Cannot be invented (WHAT NEVER GETS INVENTED).",
+      "severity": "warning",
+      "fixed": false
+    },
+    {
+      "file": "shop.html",
+      "line": 346,
+      "description": "\"Eat Me\" scent description is the verbatim copy.json placeholder \"[PLACEHOLDER — Jelisha to fill in real scent notes here.]\" (also on index.html line 288). Copy is law, so it was placed exactly and comment-marked, not paraphrased. Jelisha must replace it with real scent notes before launch.",
+      "severity": "info",
+      "fixed": false
+    },
+    {
+      "file": "site-wide",
+      "line": 0,
+      "description": "Domain is a placeholder: every canonical, og:url, twitter, and JSON-LD URL plus sitemap.xml and robots.txt use https://yourdomain.com (project_brief.meta.domain is null). Find-and-replace the host site-wide once a real domain exists. Comment markers are in each affected file.",
+      "severity": "warning",
+      "fixed": false
+    },
+    {
+      "file": "assets/",
+      "line": 0,
+      "description": "Referenced assets do not exist yet (none were provided): /assets/logo.png (nav — degrades gracefully to the text wordmark via onerror), /assets/favicon.ico (will 404), and /assets/og-image.jpg (social-share image, referenced by OG/Twitter/schema). Drop real files at these paths before launch.",
+      "severity": "warning",
+      "fixed": false
+    },
+    {
+      "file": "site-wide",
+      "line": 0,
+      "description": "URL-scheme reconciliation for deployment. On-page navigation and asset links were normalized to relative .html paths so the site works on drag-and-drop hosts and when opened directly (file://). The SEO absolute URLs (canonical/OG/sitemap) still use clean, extension-less paths (e.g. /shop). When the domain and host are finalized, make the canonical/sitemap scheme match the actually-served URLs (either configure clean-URL rewrites, or switch those URLs to .html). Note also: 404.html links are relative, so a host that serves /404.html for deep nested missing paths would resolve those links against the missing path — fine for root-level 404s and direct file open; host-dependent otherwise.",
+      "severity": "info",
+      "fixed": false
+    }
+  ],
+  "checks": {
+    "html_validity": {
+      "passed": true,
+      "issues": [],
+      "note": "All 5 pages (index, shop, ingredients-allergens, contact, 404) have <!DOCTYPE html>, <html lang=\"en\">, <head>, <body>, <meta charset>, and <meta viewport>. Exactly one <h1> per page; heading order is h1 -> h2 -> h3 with no skipped levels. No deprecated elements (<center>/<font>/styling <b>), no unclosed tags, no duplicate IDs (ids are unique per page: main, site-nav-menu, section ids, faq)."
+    },
+    "copy_completeness": {
+      "passed": true,
+      "issues": [],
+      "note": "Every section in site_architecture.json is rendered on its built page with a heading and its copy.json text placed verbatim (spot-checked headlines, subheadlines, FAQ Q&A, steps, trust-bar items, pricing). No paraphrasing, no Lorem ipsum, no empty sections. The 'Eat Me' bracketed text is the literal copy.json value (copy is law) and is tracked under placeholders, not a copy defect."
+    },
+    "design_system_compliance": {
+      "passed": true,
+      "issues": [],
+      "note": "DESIGN SYSTEM IS LAW is satisfied: every color used is a verbatim design_system.json value and no rogue colors, fonts, or off-scale spacing were introduced. Fonts and the spacing/radii/shadow scales are referenced via CSS custom properties. Hardcoded hex/rgba do exist but are all faithful to the design system: (1) #E3E8F1 (button_secondary.hover_background) and #E1E5EE (card.border) come straight from design_system.json component definitions that have no dedicated token; (2) rgba(...) values are alpha tints of --color-accent/--color-primary/--footer-text; (3) inline-SVG artwork fills use the brand palette (#3E4C76, #8294B8, #B8915E, #EEF1F5). These were left as-is intentionally — they introduce no non-system colors and the SVGs are comment-marked placeholders slated for real photos. Recommended (post-launch, optional): add tokens for the two component hex values and convert SVG fills to var() so palette changes propagate to the artwork. Button and card component styles match design_system.json exactly."
+    },
+    "architecture_completeness": {
+      "passed": true,
+      "issues": [],
+      "note": "All four architecture pages have HTML files (home->index.html, shop->shop.html, ingredients-allergens->ingredients-allergens.html, contact->contact.html) and every defined section is present. Nav has exactly the four links with the correct labels/order plus the 'Order Soaps' CTA to contact; footer has the three architecture columns (brand+description, Explore, Order & pickup). Link destinations are realized as relative .html filenames (see links check). 404.html exists per routing.404_page:true and is correctly NOT in pages[] and excluded from the sitemap."
+    },
+    "accessibility": {
+      "passed": true,
+      "issues": [],
+      "note": "Only raster image is the nav logo, which has non-empty alt (\"Raw Soaps and Suds logo\"); all decorative inline SVGs are aria-hidden and the meaningful ones use role=\"img\" + aria-label. Hamburger button has aria-label; nav exposes aria-expanded/aria-controls and Escape-to-close with focus return. Visible :focus-visible outline is defined globally and not removed without replacement; skip link present; active nav link uses color AND a bottom border (not color alone). prefers-reduced-motion disables the card hover lift. No forms exist (out of scope), so input/label checks are N/A. The empty tel: placeholder link is tracked under remaining_issues (needs a real number)."
+    },
+    "seo_completeness": {
+      "passed": false,
+      "issues": [
+        {
+          "file": "site-wide",
+          "line": 0,
+          "description": "All canonical/OG/Twitter/JSON-LD URLs, sitemap.xml, and robots.txt use the placeholder host https://yourdomain.com (domain is null). Needs the real domain.",
+          "severity": "warning",
+          "fixed": false
+        },
+        {
+          "file": "site-wide",
+          "line": 0,
+          "description": "Canonical/OG/sitemap use clean (extension-less) URLs while on-page nav now uses .html; reconcile to the final served URL scheme once host/domain are chosen.",
+          "severity": "info",
+          "fixed": false
+        }
+      ],
+      "note": "All required SEO STRUCTURE is present and correct: unique <title> and unique <meta name=description> on every page; canonical on the 4 indexable pages; 404 has noindex,follow and no canonical (correct); Open Graph + Twitter cards on the 4 pages; sitemap.xml lists the 4 pages; robots.txt exists and points to the sitemap; valid JSON-LD on every page (LocalBusiness on home+contact, Product ItemList on shop, FAQPage on ingredients-allergens) mirroring the schema/*.json files. Marked not-passed only because of the placeholder-domain and URL-scheme items above, which need human input."
+    },
+    "mobile_responsiveness": {
+      "passed": true,
+      "issues": [],
+      "note": "viewport meta (width=device-width, initial-scale=1.0) on every page including 404. No fixed pixel widths wider than 375px on block elements — widths are either max-width (faq 760px, contact-methods 560px, container 1200px) or small components. Global rule sets img/picture/svg max-width:100%. Functional hamburger mobile menu under @media (max-width:767px). Long email value uses word-break to avoid 375px overflow."
+    },
+    "links": {
+      "passed": true,
+      "issues": [
+        {
+          "file": "index.html",
+          "line": 14,
+          "description": "Internal navigation/content links and asset paths used root-relative, extension-less paths (/, /shop, /ingredients-allergens, /contact, /globals/styles.css, /assets/favicon.ico) that do not resolve to the actual files (index.html, shop.html, etc.) on a drag-and-drop static host (GitHub Pages project subpath) or when opened directly via file://. Normalized to relative .html and relative asset paths. Flagged by Agents 06 and 07.",
+          "severity": "error",
+          "fixed": true
+        },
+        {
+          "file": "shop.html",
+          "line": 14,
+          "description": "Same root-relative/extension-less internal link and asset normalization to relative .html.",
+          "severity": "error",
+          "fixed": true
+        },
+        {
+          "file": "ingredients-allergens.html",
+          "line": 14,
+          "description": "Same normalization, including the in-content FAQ link to the Contact page.",
+          "severity": "error",
+          "fixed": true
+        },
+        {
+          "file": "contact.html",
+          "line": 14,
+          "description": "Same root-relative/extension-less internal link and asset normalization to relative .html.",
+          "severity": "error",
+          "fixed": true
+        },
+        {
+          "file": "404.html",
+          "line": 14,
+          "description": "Same normalization for nav/footer/body links and asset paths.",
+          "severity": "error",
+          "fixed": true
+        },
+        {
+          "file": "globals/nav.html",
+          "line": 18,
+          "description": "Source nav partial carried the same root-relative links; normalized so regenerating pages from it won't reintroduce the broken links.",
+          "severity": "warning",
+          "fixed": true
+        },
+        {
+          "file": "globals/footer.html",
+          "line": 26,
+          "description": "Source footer partial carried the same root-relative links; normalized for consistency.",
+          "severity": "warning",
+          "fixed": true
+        },
+        {
+          "file": "components/button.html",
+          "line": 22,
+          "description": "Button reference snippet used root-relative example hrefs; normalized to relative .html for consistency.",
+          "severity": "info",
+          "fixed": true
+        }
+      ],
+      "note": "No href=\"#\" placeholder links and no external anchor links (so no target=_blank/rel=noopener needed). The nav CTA correctly targets contact.html (architecture cta_button_destination /contact). mailto: and tel: links are intentional CTAs; the empty tel: is a tracked placeholder. After the fix, the 5 served pages contain 61 relative .html links and zero root-relative internal links."
+    },
+    "forms": {
+      "passed": true,
+      "issues": [],
+      "note": "Intentional: there is NO contact form anywhere. The brief lists a working form as EXPLICITLY OUT OF SCOPE (needs a backend) and the architecture types the contact section as a mailto/tel text block, not a form. Building one would violate ARCHITECTURE IS LAW and the brief, so the form sub-checks are N/A. Ordering is handled by mailto: links (prefilled 'Soap order' subject) and a placeholder tel: link plus a clear 3-step ordering sequence."
+    },
+    "performance": {
+      "passed": true,
+      "issues": [],
+      "note": "The only <img> (40x40 nav logo) has width/height; inline SVGs carry width/height. The logo intentionally omits loading=\"lazy\" because it is above the fold in the sticky nav (lazy-loading above-the-fold images is an anti-pattern; the spec's lazy rule targets non-hero, below-fold images). No render-blocking scripts in <head> — the small nav and FAQ scripts are inline in <body>; CSS is in <head>; only styles.css is referenced (used); Google Fonts load with display=swap and preconnect."
+    },
+    "placeholders": {
+      "passed": false,
+      "issues": [
+        {
+          "file": "contact.html",
+          "line": 205,
+          "description": "Phone placeholder \"[PHONE NUMBER — Jelisha to add]\" with empty tel: href (contact methods + footer of every page). Properly comment-marked. Needs the real number from Jelisha.",
+          "severity": "warning",
+          "fixed": false
+        },
+        {
+          "file": "index.html",
+          "line": 288,
+          "description": "\"Eat Me\" scent-notes placeholder \"[PLACEHOLDER — Jelisha to fill in real scent notes here.]\" on index.html (line 288) and shop.html (line 346). Verbatim copy.json content, comment-marked. Needs real scent notes from Jelisha.",
+          "severity": "info",
+          "fixed": false
+        },
+        {
+          "file": "assets/",
+          "line": 0,
+          "description": "Placeholder/missing assets: logo.png (text wordmark shown as fallback via onerror), favicon.ico, og-image.jpg. No assets were provided; add real files before launch. Product graphics are intentional inline SVGs comment-marked 'REPLACE WITH REAL PHOTO: <slug>.jpg' (no placehold.co used).",
+          "severity": "warning",
+          "fixed": false
+        }
+      ],
+      "note": "Every placeholder is clearly comment-marked per the spec (phone, Eat Me copy, logo, domain in each file head/sitemap/robots, and per-scent REPLACE-WITH-REAL-PHOTO markers on the SVGs). No placehold.co images are used. Marked not-passed because these items remain for the human reviewer to supply; the marking requirement itself is fully met."
+    }
+  }
+}

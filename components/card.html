@@ -1,0 +1,34 @@
+<!-- ==========================================================================
+     Card component — Raw Soaps and Suds
+     Built by Agent 05. Styles live in globals/styles.css (.card + parts).
+
+     Base class:     .card
+     Interactive:    .card--interactive  (subtle hover lift; reduced-motion safe)
+     Parts:          .card__media  .card__title  .card__body
+
+     The product/scent cards on Home and Shop use .card--interactive. The
+     .card__media slot holds a custom inline-SVG scent graphic; page agents
+     drop the real <svg> in and a comment marker so a photo can replace it.
+     ========================================================================== -->
+
+<!-- Basic content card -->
+<article class="card">
+  <h3 class="card__title">Card title</h3>
+  <p class="card__body">Supporting text for the card goes here, drawn from copy.json.</p>
+</article>
+
+<!-- Interactive product/scent card (used by the Shop grid and Home preview).
+     The hover lift honors prefers-reduced-motion via globals/styles.css. -->
+<article class="card card--interactive">
+  <div class="card__media">
+    <!-- SCENT GRAPHIC: page agent inserts the custom inline SVG here.
+         Replace with a real product photo when available. -->
+    <svg width="72" height="72" viewBox="0 0 72 72" role="img" aria-label="Scent illustration" focusable="false">
+      <circle cx="36" cy="36" r="30" fill="none" stroke="#B8915E" stroke-width="3" />
+    </svg>
+  </div>
+  <h3 class="card__title">Mango Madness</h3>
+  <p class="card__body">Bright and juicy, like ripe mango in the height of summer.</p>
+  <!-- No add-to-cart: the per-card CTA is a mailto order link. -->
+  <a class="btn btn--secondary btn--block" href="mailto:jelishayork439@gmail.com?subject=Soap%20order">Email or call Jelisha to order</a>
+</article>

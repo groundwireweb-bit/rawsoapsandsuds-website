@@ -1,0 +1,143 @@
+{
+  "colors": {
+    "primary": "#3E4C76",
+    "primary_dark": "#2F3A5C",
+    "primary_light": "#8294B8",
+    "accent": "#B8915E",
+    "background": "#EEF1F5",
+    "surface": "#FFFFFF",
+    "text_primary": "#2B2F3D",
+    "text_secondary": "#555C70",
+    "text_muted": "#686E82",
+    "border": "#D5DAE4",
+    "success": "#4F7A52",
+    "error": "#B3433A",
+    "warning": "#C08A3E"
+  },
+
+  "typography": {
+    "font_heading": "'Bitter', Georgia, 'Times New Roman', serif",
+    "font_body": "'Karla', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+    "font_mono": "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace",
+    "scale": {
+      "xs": "0.75rem",
+      "sm": "0.875rem",
+      "base": "1rem",
+      "lg": "1.125rem",
+      "xl": "1.25rem",
+      "2xl": "1.5rem",
+      "3xl": "1.875rem",
+      "4xl": "2.25rem",
+      "5xl": "3rem"
+    },
+    "weight_normal": 400,
+    "weight_medium": 500,
+    "weight_bold": 700,
+    "line_height_tight": "1.15",
+    "line_height_normal": "1.5",
+    "line_height_relaxed": "1.7"
+  },
+
+  "spacing": {
+    "unit": "4px",
+    "scale": {
+      "1": "4px",
+      "2": "8px",
+      "3": "12px",
+      "4": "16px",
+      "5": "20px",
+      "6": "24px",
+      "8": "32px",
+      "10": "40px",
+      "12": "48px",
+      "16": "64px",
+      "20": "80px",
+      "24": "96px"
+    }
+  },
+
+  "radii": {
+    "sm": "4px",
+    "md": "8px",
+    "lg": "12px",
+    "xl": "16px",
+    "full": "9999px"
+  },
+
+  "shadows": {
+    "sm": "0 1px 2px rgba(43, 47, 61, 0.06)",
+    "md": "0 2px 6px rgba(43, 47, 61, 0.08)",
+    "lg": "0 6px 16px rgba(43, 47, 61, 0.10)",
+    "xl": "0 12px 28px rgba(43, 47, 61, 0.12)"
+  },
+
+  "breakpoints": {
+    "mobile": "375px",
+    "tablet": "768px",
+    "desktop": "1024px",
+    "wide": "1280px"
+  },
+
+  "max_content_width": "1200px",
+
+  "motion": {
+    "duration_fast": "150ms",
+    "duration_base": "250ms",
+    "duration_slow": "400ms",
+    "easing_default": "ease-in-out"
+  },
+
+  "components": {
+    "button_primary": {
+      "background": "#3E4C76",
+      "text": "#FFFFFF",
+      "border_radius": "8px",
+      "padding": "12px 24px",
+      "font_weight": "700",
+      "hover_background": "#2F3A5C"
+    },
+    "button_secondary": {
+      "background": "transparent",
+      "text": "#3E4C76",
+      "border": "1px solid #3E4C76",
+      "border_radius": "8px",
+      "padding": "12px 24px",
+      "font_weight": "700",
+      "hover_background": "#E3E8F1"
+    },
+    "input": {
+      "background": "#FFFFFF",
+      "border": "1px solid #D5DAE4",
+      "border_radius": "8px",
+      "padding": "10px 14px",
+      "focus_border": "2px solid #3E4C76",
+      "text": "#2B2F3D",
+      "placeholder": "#686E82"
+    },
+    "card": {
+      "background": "#FFFFFF",
+      "border": "1px solid #E1E5EE",
+      "border_radius": "12px",
+      "padding": "24px",
+      "shadow": "0 2px 6px rgba(43, 47, 61, 0.08)"
+    },
+    "nav": {
+      "background": "#FFFFFF",
+      "text": "#2B2F3D",
+      "text_hover": "#3E4C76",
+      "height": "64px",
+      "sticky": true
+    },
+    "footer": {
+      "background": "#2F3A5C",
+      "text": "#EEF1F5",
+      "link_color": "#CDA874"
+    },
+    "section_padding": {
+      "vertical": "64px",
+      "horizontal": "24px"
+    }
+  },
+
+  "style_notes": "Bluebonnet blue (#3E4C76) leads, anchored in the Texas wildflower rather than coastal-cottage or farmhouse, with kraft-paper tan (#B8915E) used sparingly for the stamped badge, dividers, and icon detail to supply the handmade-materials warmth that blue alone lacks. The background is a pale blue-white (#EEF1F5), deliberately not warm cream, and the type pairing is Bitter (a sturdy slab serif in bold/black weights, used only for the wordmark and headings) over Karla for body — chosen to read like a rustic hand-stamp and to avoid the overused high-contrast-serif-on-cream-with-terracotta look the client and research both reject. Note: the brief's display options were 'Yeseva One or Bitter in a semibold/black weight,' but Yeseva One ships a single 400 weight only, so Bitter is the sole option that satisfies the requested heavier weight; the dusty sky blue secondary (#8294B8) is mapped to primary_light for highlights and softer UI. Everything stays quiet and disciplined — moderate radii, low indigo-tinted shadows, and motion limited to a subtle product-card hover that must honor prefers-reduced-motion — so the one circular stamped maker's-badge is the single bold moment. The client-provided palette is internally coherent and meets WCAG AA for body text on background and surface; no concerns to flag."
+}

@@ -1,0 +1,30 @@
+<!-- ==========================================================================
+     Badge / tag component — Raw Soaps and Suds
+     Built by Agent 05. Styles live in globals/styles.css (.badge + modifiers,
+     plus .stamp-badge for the one bold maker's-stamp moment).
+
+     Pill badge:   .badge
+     Variants:     .badge--accent  (kraft-tan tint)
+                   .badge--brand   (bluebonnet-blue tint)
+
+     Stamp badge:  .stamp-badge — the single circular maker's stamp called out
+                   in design_system.json style_notes. Use sparingly (hero/footer).
+
+     Good uses for pill badges: trust-bar facts ("Local pickup"), pricing
+     ("3 for $10"). They carry no add-to-cart meaning.
+     ========================================================================== -->
+
+<!-- Neutral pill badge -->
+<span class="badge">Local pickup</span>
+
+<!-- Accent (kraft-tan) pill badge -->
+<span class="badge badge--accent">Handmade</span>
+
+<!-- Brand (blue) pill badge -->
+<span class="badge badge--brand">3 for $10</span>
+
+<!-- Circular stamped maker's badge — the one bold visual.
+     Plain text fallback inside; no icon library required. -->
+<span class="stamp-badge" aria-label="Handmade in Johnson County, Texas">
+  Handmade<br />in&nbsp;TX
+</span>

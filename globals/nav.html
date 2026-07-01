@@ -1,0 +1,111 @@
+<!-- ==========================================================================
+     Raw Soaps and Suds — Navigation
+     Built by Agent 05. Shared across every page.
+
+     Usage:
+       - Each page must include globals/styles.css for this to render.
+       - Set the current page on <body> so the active link highlights, e.g.:
+           <body data-page="home">   (home | shop | ingredients | contact)
+       - Sticky behavior comes from .site-nav--sticky (sticky:true in the
+         design system / architecture).
+       - Links and labels come from copy.json (nav) and site_architecture.json
+         (global_components.nav). The CTA uses .btn--primary (button_primary).
+     ========================================================================== -->
+<nav class="site-nav site-nav--sticky" aria-label="Primary">
+  <div class="site-nav__inner">
+    <!-- Brand: the stamped bluebonnet badge (assets/logo-mark.svg) paired with
+         the text wordmark. alt="" because the wordmark span and the link's
+         aria-label already name the business; onerror hides the mark and leaves
+         the wordmark if the SVG ever fails to load. -->
+    <a class="site-nav__brand" href="index.html" aria-label="Raw Soaps and Suds, home">
+      <img
+        class="site-nav__logo"
+        src="assets/logo-mark.svg"
+        alt=""
+        width="40"
+        height="40"
+        onerror="this.style.display='none'"
+      />
+      <span>Raw Soaps and Suds</span>
+    </a>
+
+    <!-- Hamburger toggle: visible on mobile only (CSS). Vanilla JS below. -->
+    <button
+      class="site-nav__toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-nav-menu"
+      aria-label="Open menu"
+    >
+      <span class="site-nav__toggle-bar"></span>
+      <span class="site-nav__toggle-bar"></span>
+      <span class="site-nav__toggle-bar"></span>
+    </button>
+
+    <!-- Menu: horizontal on desktop, collapses behind the toggle on mobile. -->
+    <div class="site-nav__menu" id="site-nav-menu">
+      <ul class="site-nav__links">
+        <li><a class="site-nav__link" href="index.html" data-nav="home">Home</a></li>
+        <li><a class="site-nav__link" href="shop.html" data-nav="shop">Shop</a></li>
+        <li><a class="site-nav__link" href="ingredients-allergens.html" data-nav="ingredients">Ingredients &amp; Allergens</a></li>
+        <li><a class="site-nav__link" href="request.html" data-nav="request">Request</a></li>
+      </ul>
+
+      <!-- CTA button: button_primary styles. Destination from architecture. -->
+      <a class="btn btn--primary site-nav__cta" href="request.html">Order Soaps</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  (function () {
+    'use strict';
+
+    var nav = document.querySelector('.site-nav');
+    if (!nav) {
+      return;
+    }
+
+    var toggle = nav.querySelector('.site-nav__toggle');
+    var menu = nav.querySelector('.site-nav__menu');
+
+    // Mobile hamburger: open/close the collapsed menu. No library used.
+    function setMenu(open) {
+      menu.setAttribute('data-open', open ? 'true' : 'false');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    }
+
+    if (toggle && menu) {
+      toggle.addEventListener('click', function () {
+        var open = toggle.getAttribute('aria-expanded') === 'true';
+        setMenu(!open);
+      });
+
+      // Close the menu after following a link on mobile.
+      menu.addEventListener('click', function (event) {
+        if (event.target.closest('a')) {
+          setMenu(false);
+        }
+      });
+
+      // Close on Escape and return focus to the toggle.
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+          setMenu(false);
+          toggle.focus();
+        }
+      });
+    }
+
+    // Highlight the active link from <body data-page="..."> so each page
+    // doesn't have to hardcode it.
+    var current = document.body.getAttribute('data-page');
+    if (current) {
+      var active = nav.querySelector('.site-nav__link[data-nav="' + current + '"]');
+      if (active) {
+        active.setAttribute('aria-current', 'page');
+      }
+    }
+  })();
+</script>

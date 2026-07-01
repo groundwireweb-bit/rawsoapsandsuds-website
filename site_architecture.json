@@ -1,0 +1,244 @@
+{
+  "pages": [
+    {
+      "id": "home",
+      "slug": "/",
+      "title": "Raw Soaps and Suds — Handmade Soap in Johnson County, TX",
+      "meta_description": "Handmade small-batch soap from Johnson County, Texas. Five essential-oil scents on a coconut oil and shea butter base. $4 a bar, local pickup.",
+      "sections": [
+        {
+          "id": "home_hero",
+          "type": "hero",
+          "purpose": "Establish the brand in one screen and push visitors toward the Shop, while planting one honest ingredient/process line.",
+          "content_notes": "Text-based wordmark 'Raw Soaps and Suds' (display font, optional stamped badge), one tagline (use brief option: 'Small-batch soap, handmade in Johnson County, Texas.' or 'Handmade soap, made the slow way, right here in Johnson County.'), ONE short line about the process/base (handmade, coconut oil + shea butter, scented with essential oils), and a single primary button to Shop. No stock photo (none exist); the stamped badge is the only bold visual. Do NOT write a personal/owner story here — the brief forbids an About narrative.",
+          "features": [],
+          "cta": { "label": "Shop the Soaps", "destination": "/shop" }
+        },
+        {
+          "id": "home_trust_bar",
+          "type": "trust_bar",
+          "purpose": "Quick, scannable reassurance using only real, provided facts — no fabricated stats.",
+          "content_notes": "A compact row of genuine trust signals: 'Handmade in Johnson County, TX', 'Coconut oil + shea butter base', 'Scented with essential oils', '$4 a bar / 3 for $10', 'Local pickup'. NO invented years-in-business, job counts, reviews, awards, or certifications — none were provided. Honesty and specificity are the trust strategy.",
+          "features": [],
+          "cta": null
+        },
+        {
+          "id": "home_services_summary",
+          "type": "services",
+          "purpose": "Preview the five soaps to create desire and funnel to the full Shop catalog.",
+          "content_notes": "Summary preview of all five scents — Mango Madness, Cherry Blossom, Apple Fantasy, Perfect Patchouli, Eat Me — each shown with its illustrated inline-SVG graphic and name (and optionally the one-line description). Link the block to Shop for full descriptions and pricing. Do NOT number the scents 01/02/03 — they are not a sequence. This is a teaser, not the full product grid (that lives on Shop).",
+          "features": ["card_hover", "reduced_motion_safe"],
+          "cta": { "label": "See all five soaps", "destination": "/shop" }
+        },
+        {
+          "id": "home_ingredients_snippet",
+          "type": "about_snippet",
+          "purpose": "Give the one short ingredient/process line room to breathe and route trust-seeking buyers to the Ingredients & Allergens page.",
+          "content_notes": "One short paragraph on what every bar shares — coconut oil and shea butter, saponified with lye, scented with essential oils, made the slow way in small batches. Keep it about the SOAP and the process, NOT a personal owner story (no About narrative). Mention that lye reacts away during curing only briefly here; the full explanation lives on Ingredients & Allergens. Tease and link to that page.",
+          "features": [],
+          "cta": { "label": "What's in every bar", "destination": "/ingredients-allergens" }
+        },
+        {
+          "id": "home_cta_strip",
+          "type": "cta_strip",
+          "purpose": "Close the home page with the primary order action since there is no cart.",
+          "content_notes": "Full-width band restating the primary CTA: email or call Jelisha to place a local-pickup order. Use a mailto link (prefilled subject like 'Soap order') and, once available, a tel link; phone is a placeholder for now. State plainly that ordering is by email or phone for local pickup — there is no online checkout.",
+          "features": [],
+          "cta": { "label": "Email Jelisha to order", "destination": "mailto:jelishayork439@gmail.com?subject=Soap%20order" }
+        }
+      ]
+    },
+    {
+      "id": "shop",
+      "slug": "/shop",
+      "title": "Shop the Soaps — Raw Soaps and Suds",
+      "meta_description": "Five handmade essential-oil soaps: Mango Madness, Cherry Blossom, Apple Fantasy, Perfect Patchouli, Eat Me. $4 a bar or 3 for $10. Local pickup in TX.",
+      "sections": [
+        {
+          "id": "shop_hero",
+          "type": "hero",
+          "purpose": "Introduce the catalog and immediately surface that ordering is by email/phone for pickup.",
+          "content_notes": "Short page hero: heading 'Shop the Soaps' and one line setting up the grid (five small-batch scents, same gentle base, different essential oils). Make clear up front that there is no cart — you reserve scents by emailing or calling Jelisha for local pickup. Keep it brief; the grid and pricing do the work.",
+          "features": [],
+          "cta": { "label": "Email Jelisha to order", "destination": "mailto:jelishayork439@gmail.com?subject=Soap%20order" }
+        },
+        {
+          "id": "shop_pricing",
+          "type": "pricing",
+          "purpose": "State the flat pricing once, prominently, near the top — removes the most common purchase hesitation.",
+          "content_notes": "Single clear pricing callout: '$4 per bar, or 3 for $10 — mix and match scents.' Pricing is identical across all five scents, so state it once here rather than repeating a price on every card. No tiers, no packages beyond this. No hidden 'contact for price' — show it openly.",
+          "features": [],
+          "cta": null
+        },
+        {
+          "id": "shop_grid",
+          "type": "services",
+          "purpose": "The structural centerpiece: present all five soaps as a responsive card grid that replaces an add-to-cart catalog.",
+          "content_notes": "Responsive grid of five cards, one per scent: Mango Madness ('Bright and juicy, like ripe mango in the height of summer.'), Cherry Blossom ('Soft, floral, and a little sweet — like spring in bloom.'), Apple Fantasy ('Crisp and sweet, like fresh-picked orchard apples.'), Perfect Patchouli ('Warm, earthy, and grounding — patchouli done right.'), Eat Me ('Playful and a little mischievous — Jelisha to fill in real notes here.' — leave as a clearly findable placeholder). Each card: scent name, its custom illustrated inline-SVG graphic (mango slice, blossom sprig, apple, patchouli leaf, playful mark for Eat Me — comment each so a real photo can be swapped later), the one-line draft description, and a repeated 'email or call Jelisha to order' CTA since there is no add-to-cart. Do NOT number the cards 01/02/03 — not a sequence. Pricing is stated once above, not per card.",
+          "features": ["card_hover", "reduced_motion_safe"],
+          "cta": { "label": "Email or call Jelisha to order", "destination": "mailto:jelishayork439@gmail.com?subject=Soap%20order" }
+        },
+        {
+          "id": "shop_cta_strip",
+          "type": "cta_strip",
+          "purpose": "Reinforce the order path at the bottom of the catalog.",
+          "content_notes": "Full-width band: pick your scents and email or call Jelisha to reserve for local pickup. Mailto with prefilled 'Soap order' subject; tel link once the real number is added. Restate that pickup is in Johnson County, TX — no shipping.",
+          "features": [],
+          "cta": { "label": "Email Jelisha to order", "destination": "mailto:jelishayork439@gmail.com?subject=Soap%20order" }
+        }
+      ]
+    },
+    {
+      "id": "ingredients-allergens",
+      "slug": "/ingredients-allergens",
+      "title": "Ingredients & Allergens — Raw Soaps and Suds",
+      "meta_description": "What every bar is made of: coconut oil, shea butter, lye and essential oils — and why no active lye remains after curing. Allergy questions welcome.",
+      "sections": [
+        {
+          "id": "ingredients_hero",
+          "type": "hero",
+          "purpose": "Frame this as the honest, plain-language ingredient and safety page — the #1 trust driver for skin-contact soap.",
+          "content_notes": "Short page hero: heading like 'What's in every bar' and one line that this page explains exactly what the soap is made of and addresses lye and essential-oil sensitivities honestly. No fluff, no health/medical claims.",
+          "features": [],
+          "cta": null
+        },
+        {
+          "id": "ingredients_base",
+          "type": "about_snippet",
+          "purpose": "Disclose the shared base in plain language and deliver the lye/saponification reassurance — the top stated objection.",
+          "content_notes": "Plain-language explainer of the one shared base across all five bars: coconut oil and shea butter, saponified with lye (sodium hydroxide), scented with essential oils. Then the key reassurance: the lye reacts completely with the oils during saponification, so once the bars are cured no ACTIVE lye remains in the finished soap. Do NOT say 'lye-free', 'chemical-free', or 'no chemicals' — those are false and undercut the honest explanation (soap is chemistry). No 'detox', 'antibacterial', 'cures', or other medical/therapeutic claims. Calm, confident, transparent tone.",
+          "features": [],
+          "cta": null
+        },
+        {
+          "id": "ingredients_allergens",
+          "type": "about_snippet",
+          "purpose": "Address the second stated objection — essential-oil/fragrance sensitivities — and invite buyers to ask before ordering.",
+          "content_notes": "Short, direct allergen note: every bar is scented with essential oils, which are a common sensitivity for some people. Anyone with known fragrance or essential-oil allergies should reach out to Jelisha before ordering so she can talk through the scents. No alarmism, no medical claims — just an honest heads-up and an open door.",
+          "features": [],
+          "cta": { "label": "Email Jelisha about an allergy", "destination": "mailto:jelishayork439@gmail.com?subject=Allergy%20question%20before%20ordering" }
+        },
+        {
+          "id": "ingredients_faq",
+          "type": "faq",
+          "purpose": "Fold the five real customer questions into one place (keeps the site at four pages) and support FAQPage schema.",
+          "content_notes": "Accordion answering the brief's five real customer questions: (1) Is there still lye in the finished soap? (no active lye remains after curing — reuse the explanation above); (2) What is the soap made of? (coconut oil, shea butter, lye, essential oils); (3) How much does a bar cost? ($4 per bar, or 3 for $10 — mix and match); (4) How do I order? (email or call Jelisha for local pickup — link to Contact); (5) Do you ship? (no — local pickup only in Johnson County, TX). Keep answers short and honest; this content should be marked up so SEO can add FAQPage schema later.",
+          "features": ["accordion"],
+          "cta": null
+        },
+        {
+          "id": "ingredients_cta_strip",
+          "type": "cta_strip",
+          "purpose": "Convert reassured visitors and catch anyone with a lingering allergy concern.",
+          "content_notes": "Full-width band: questions about ingredients or allergies? Email Jelisha before you order. Mailto with a prefilled subject; route ordering through Contact. Restate local pickup, no shipping.",
+          "features": [],
+          "cta": { "label": "Email before you order", "destination": "mailto:jelishayork439@gmail.com?subject=Ingredient%20or%20allergy%20question" }
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "slug": "/contact",
+      "title": "Contact & Ordering — Raw Soaps and Suds",
+      "meta_description": "Email or call Jelisha to order handmade soap for local pickup in Johnson County, Texas. Three simple steps, no shipping, no online checkout.",
+      "sections": [
+        {
+          "id": "contact_hero",
+          "type": "hero",
+          "purpose": "Make the conversion page feel effortless and personal from the first line.",
+          "content_notes": "Short page hero: heading like 'Order for local pickup' and one warm line that ordering is direct and personal — email or call Jelisha, no cart, no checkout. Set an at-ease, market-table tone.",
+          "features": [],
+          "cta": { "label": "Email Jelisha to order", "destination": "mailto:jelishayork439@gmail.com?subject=Soap%20order" }
+        },
+        {
+          "id": "contact_methods",
+          "type": "about_snippet",
+          "purpose": "Present the actual contact methods as the primary conversion content — this replaces a contact form, which is out of scope.",
+          "content_notes": "Contact details block (NOT a form — there is no backend; a working form is explicitly out of scope). Show: email as a mailto link (jelishayork439@gmail.com, prefilled 'Soap order' subject) and phone as a tel link using the clearly-marked placeholder '[PHONE NUMBER — Jelisha to add]' until the real number exists. Make both large and tappable (most visitors are on a phone). Refer to the owner as 'Jelisha' only — first name, no last name. Do NOT build an input/textarea/submit form here.",
+          "features": [],
+          "cta": { "label": "Email Jelisha to order", "destination": "mailto:jelishayork439@gmail.com?subject=Soap%20order" }
+        },
+        {
+          "id": "contact_ordering_steps",
+          "type": "how_it_works",
+          "purpose": "Replace checkout with a clear, honest three-step ordering sequence so buyers know exactly what to expect.",
+          "content_notes": "Real numbered sequence of three steps: (1) Email or call Jelisha with the scent(s) and quantity you want; (2) she confirms availability and your total; (3) you arrange a pickup time and location. Plain and friendly — this is the 'how to order' that stands in for a cart.",
+          "features": [],
+          "cta": null
+        },
+        {
+          "id": "contact_service_area",
+          "type": "service_areas",
+          "purpose": "State coverage honestly: local pickup only, no shipping, no published street address.",
+          "content_notes": "Service-area note: Johnson County, Texas — local pickup / in-person only. No shipping. No street address is published (pickup time and place are arranged when you order). A list/text statement is sufficient; a map embed is optional and not required (no street address to pin). Mention nearby towns (e.g. Cleburne, Burleson) only if accurate, to aid local discovery.",
+          "features": [],
+          "cta": null
+        },
+        {
+          "id": "contact_cta_strip",
+          "type": "cta_strip",
+          "purpose": "Final, unmissable order prompt before the footer.",
+          "content_notes": "Full-width closing band restating the primary CTA: email or call Jelisha to place your local-pickup order. Mailto with prefilled subject; tel link once the number is added.",
+          "features": [],
+          "cta": { "label": "Email or call Jelisha to order", "destination": "mailto:jelishayork439@gmail.com?subject=Soap%20order" }
+        }
+      ]
+    }
+  ],
+
+  "global_components": {
+    "nav": {
+      "logo": true,
+      "links": [
+        { "label": "Home", "destination": "/" },
+        { "label": "Shop", "destination": "/shop" },
+        { "label": "Ingredients & Allergens", "destination": "/ingredients-allergens" },
+        { "label": "Contact", "destination": "/contact" }
+      ],
+      "cta_button": "Order Soaps",
+      "cta_button_destination": "/contact",
+      "sticky": true,
+      "mobile_menu": true
+    },
+    "footer": {
+      "columns": [
+        {
+          "heading": "Raw Soaps and Suds",
+          "items": [
+            "Text wordmark (optional stamped badge)",
+            "One line: handmade small-batch soap, Johnson County, Texas"
+          ]
+        },
+        {
+          "heading": "Explore",
+          "items": [
+            "Home — /",
+            "Shop — /shop",
+            "Ingredients & Allergens — /ingredients-allergens",
+            "Contact — /contact"
+          ]
+        },
+        {
+          "heading": "Order & pickup",
+          "items": [
+            "Email: jelishayork439@gmail.com (mailto)",
+            "Phone: [PHONE NUMBER — Jelisha to add] (tel placeholder)",
+            "Johnson County, TX — local pickup only, no shipping"
+          ]
+        }
+      ],
+      "show_contact": true,
+      "show_social": false,
+      "show_copyright": true,
+      "cta_strip": false
+    }
+  },
+
+  "routing": {
+    "404_page": true,
+    "sitemap": true,
+    "robots": true
+  },
+
+  "notes": "Page order follows the rules: Home first, Contact last; Shop precedes Ingredients & Allergens because the catalog most directly drives the primary CTA, with the ingredient/allergen trust page positioned just before the conversion page. All four pages are client-requested; no extra pages were added. The About / maker-story page that handmade-goods convention would normally recommend is deliberately omitted — the brief forbids inventing a personal narrative and explicitly states there is no About page (research confirms). No story is smuggled into Home; the home about_snippet is strictly about the soap/process, not the owner. INTENTIONAL DEVIATION FROM A SECTION RULE: the architecture's 'always include testimonials on Home' rule is NOT followed, because no testimonials, reviews, or ratings were provided and the invariant + research both forbid fabricating them. Honesty outranks the template here; if real testimonials are collected later, add a single testimonials section to Home (never two on one page). The trust_bar uses only real, provided facts (handmade, local, base ingredients, flat pricing) — no invented years-in-business, job counts, awards, or certifications. NO contact form anywhere: a working form needs a backend and is explicitly out of scope; contact_methods uses mailto/tel only (the contact_methods and contact details sections are typed as about_snippet text blocks, NOT contact_form, to prevent any form from being built). The order CTA is repeated on Home, Shop, and Contact since there is no cart/checkout. Phone is a clearly-marked placeholder ('[PHONE NUMBER — Jelisha to add]') wired as a tel link to be filled in later; email is live (jelishayork439@gmail.com) with a prefilled subject to lower friction and help triage. Owner is referenced as 'Jelisha' only, first name. The five scent descriptions (especially 'Eat Me') are draft placeholders for Jelisha to personalize — flagged in content_notes for the copy agent. Custom inline-SVG graphics (no stock photos, no placehold.co for products) carry comment markers so real photos drop in without restructuring. Motion is limited to a prefers-reduced-motion-safe product-card hover."
+}

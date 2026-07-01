@@ -1,0 +1,122 @@
+{
+  "project_id": "raw-soaps-and-suds-001",
+  "generated_at": "2026-06-30T12:00:00Z",
+  "timeline": "No fixed deadline — small, low-stakes site.",
+
+  "business": {
+    "name": "Raw Soaps and Suds",
+    "description": "A small, handmade soap business run by Jelisha out of Johnson County, Texas. She makes five soap scents and sells nothing else right now. All bars share the same base: coconut oil and shea butter, saponified with lye (sodium hydroxide), scented with essential oils. As with all traditional handmade soap, the lye reacts completely with the oils during saponification, so once the bars are cured no active lye remains in the finished soap.",
+    "services": [
+      "Mango Madness soap bar",
+      "Cherry Blossom soap bar",
+      "Apple Fantasy soap bar",
+      "Perfect Patchouli soap bar",
+      "Eat Me soap bar"
+    ],
+    "service_areas": "Johnson County, Texas — local pickup / in-person only, no shipping",
+    "years_in_business": null,
+    "employee_count": "1 (Jelisha, sole owner and maker)",
+    "differentiator": "Small-batch soap, handmade the slow way in Johnson County, Texas, from a simple coconut oil and shea butter base scented with essential oils.",
+    "competitors": []
+  },
+
+  "goals": {
+    "primary_purpose": "Present the soaps well, build trust around the ingredients, and make it effortless for a visitor to email or call Jelisha to place an order for local pickup. The site has no shopping cart or payment processing.",
+    "primary_cta": [
+      "Email or call Jelisha to order"
+    ],
+    "business_problem": "Jelisha needs a simple, trustworthy online presence that showcases her five soaps and her ingredients, and routes interested buyers directly to email or phone for local-pickup orders. There is no online checkout.",
+    "success_metric": "Visitors email or call Jelisha to place a local-pickup order."
+  },
+
+  "audience": {
+    "ideal_customer": "Local Johnson County, Texas buyers looking for handmade, natural soap they can pick up in person.",
+    "common_questions": [
+      "Is there still lye in the finished soap?",
+      "What is the soap made of?",
+      "How much does a bar cost?",
+      "How do I order?",
+      "Do you ship?"
+    ],
+    "objections": [
+      "Concern about lye in handmade soap",
+      "concern about essential-oil or fragrance sensitivities and allergies."
+    ],
+    "buying_reasons": [
+      "Handmade and small-batch",
+      "simple natural base of coconut oil and shea butter",
+      "locally made",
+      "affordable at $4 per bar or 3 for $10."
+    ]
+  },
+
+  "design": {
+    "liked_websites": [],
+    "style_keywords": [
+      "rustic",
+      "handmade",
+      "primarily blue",
+      "Texas bluebonnet",
+      "kraft paper",
+      "twine",
+      "hand-stamped labels",
+      "quiet and disciplined with one bold stamped-badge moment"
+    ],
+    "brand_colors": [
+      "#3E4C76 (Bluebonnet blue, primary)",
+      "#8294B8 (Dusty sky blue, secondary)",
+      "#B8915E (Kraft paper tan, accent — use sparingly for labels, dividers, icon details)",
+      "#EEF1F5 (Pale blue-white background, not warm cream)",
+      "#2B2F3D (Deep indigo-charcoal body text, not pure black)"
+    ],
+    "needs_colors_generated": false,
+    "preferred_font": "Display (logo + headers only, used sparingly): Yeseva One or Bitter in a semibold/black weight. Body: Karla or Work Sans. All free Google Fonts. Avoid the overused high-contrast-serif-on-cream pairing.",
+    "design_direction_notes": "Anchor the blue in Texas bluebonnets, not generic coastal-cottage or farmhouse. Ground 'handmade' in real soap-packaging materials: kraft paper, twine, hand-stamped labels. AVOID the AI-default warm-cream-background-with-high-contrast-serif-and-terracotta-accent look. Signature element: a stamped circular badge (wax seal / maker's mark) featuring a simple bluebonnet sprig or soap-bar icon, reused as the logo motif and on product cards. Spend the one moment of boldness there and keep everything else quiet. Motion: minimal and purposeful — a subtle hover state on product cards only; skip heavy scroll animations or page-load sequences. Logo: no real logo yet; build a text-based wordmark 'Raw Soaps and Suds' in the display font, optionally paired with the badge, built in HTML/CSS or inline SVG (not a locked image) so it is easy to refine later."
+  },
+
+  "assets": {
+    "logo_urls": [],
+    "needs_logo_designed": true,
+    "photo_urls": [],
+    "needs_stock_photos": false,
+    "other_file_urls": [],
+    "asset_notes": "No real logo and no product photos exist yet. For each of the five scents, build a charming, simple, visually-distinct illustrated soap-bar graphic as INLINE SVG in the brand palette (e.g. a mango-slice detail for Mango Madness, a blossom sprig for Cherry Blossom, an apple for Apple Fantasy, an earthy patchouli leaf for Perfect Patchouli, and a playful whimsical mark for Eat Me). Do NOT use placehold.co or stock photos for products — use these custom SVGs. Mark each graphic in code with a clear comment so a real photo can be swapped in later, e.g. <!-- REPLACE WITH REAL PHOTO: mango-madness.jpg -->. Keep the wordmark and badge as HTML/CSS/SVG, not image files."
+  },
+
+  "site": {
+    "pages": [
+      "Home",
+      "Shop",
+      "Ingredients & Allergens",
+      "Contact"
+    ],
+    "features": [
+      "Mobile nav toggle (if needed)",
+      "mailto and tel links as the primary calls-to-action throughout"
+    ],
+    "testimonials": [],
+    "highlighted_services": [
+      "Mango Madness",
+      "Cherry Blossom",
+      "Apple Fantasy",
+      "Perfect Patchouli",
+      "Eat Me"
+    ],
+    "existing_copy": "TAGLINE (pick one or propose something close): (1) 'Small-batch soap, handmade in Johnson County, Texas.' (2) 'Handmade soap, made the slow way, right here in Johnson County.' | PRICING (identical across all five scents, state once clearly near the top of Shop): '$4 per bar, or 3 for $10 — mix and match scents.' | SCENT DRAFT DESCRIPTIONS (mood-based placeholders — Jelisha to personalize before launch, especially 'Eat Me'): Mango Madness — 'Bright and juicy, like ripe mango in the height of summer.'; Cherry Blossom — 'Soft, floral, and a little sweet — like spring in bloom.'; Apple Fantasy — 'Crisp and sweet, like fresh-picked orchard apples.'; Perfect Patchouli — 'Warm, earthy, and grounding — patchouli done right.'; Eat Me — 'Playful and a little mischievous — Jelisha to fill in real notes here.' | HOME: wordmark, tagline, a clear 'Shop the Soaps' button linking to Shop, and ONE short line about the ingredients/process. There is NO About/story page — do not invent a personal narrative. | INGREDIENTS & ALLERGENS: explain the shared base (coconut oil + shea butter, saponified with lye, scented with essential oils); reassure briefly that after curing no active lye remains; note essential oils are a common sensitivity and anyone with known fragrance/essential-oil allergies should reach out to Jelisha before ordering. | CONTACT: email (mailto), phone (placeholder, clearly marked), service area Johnson County TX local-pickup-only, plus ordering steps as a real numbered sequence: (1) email or call Jelisha with the scent(s) and quantity wanted, (2) she confirms availability and total, (3) you arrange a pickup time and location. | SHOP: all five scents as cards in a grid — do NOT number them 01/02/03, they are not a sequence; each card has name, illustrated SVG graphic, one-line draft description, and the price context; repeat the 'email or call Jelisha to order' CTA prominently since there is no add-to-cart anywhere."
+  },
+
+  "contact": {
+    "phone": null,
+    "phone_placeholder": "[PHONE NUMBER — Jelisha to add]",
+    "email": "jelishayork439@gmail.com",
+    "address": "Johnson County, Texas (local pickup / in-person only — no street address published)",
+    "business_hours": null,
+    "social_links": []
+  },
+
+  "meta": {
+    "domain": null,
+    "competing_events": null,
+    "additional_notes": "BUILD CONSTRAINTS: Static, multi-page site — plain HTML/CSS with light JavaScript only if needed (e.g. mobile nav toggle). No framework, no build step; must drag-and-drop onto a static host (GitHub Pages, Netlify). Four pages share ONE stylesheet. Mobile-first and fully responsive (most visitors land on a phone). Fast-loading, no heavy dependencies. No backend, no database — all content hardcoded in HTML. EXPLICITLY OUT OF SCOPE: no shopping cart, no checkout, no payment processing, no shipping, and NO contact form (a working form would need a backend; use mailto: and tel: links as the primary CTAs instead). ACCESSIBILITY FLOOR: real alt text on every graphic, sufficient color contrast, visible keyboard focus states, and motion that respects prefers-reduced-motion. NAMING RULE: refer to the owner as 'Jelisha' — first name only, no last name anywhere on the site. PLACEHOLDERS to leave clearly findable for a non-developer to swap later: phone number ([PHONE NUMBER — Jelisha to add] on Contact), product photos (illustrated SVG placeholders for now, structured so real photos drop in without restructuring), logo (text-based wordmark for now), and the five mood-based product descriptions (Jelisha to personalize, especially 'Eat Me')."
+  }
+}

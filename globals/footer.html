@@ -1,0 +1,55 @@
+<!-- ==========================================================================
+     Raw Soaps and Suds — Footer
+     Built by Agent 05. Shared across every page.
+
+     Columns and content from site_architecture.json (global_components.footer)
+     and copy.json (footer + global).
+       - show_social: false  -> no social icon links rendered.
+       - cta_strip: false    -> no pre-footer CTA band rendered here.
+       - show_contact: true, show_copyright: true.
+     ========================================================================== -->
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <!-- Column 1: brand + one-line description (copy.json footer.description) -->
+    <div class="site-footer__col">
+      <p class="site-footer__brand">Raw Soaps and Suds</p>
+      <p class="site-footer__description">
+        Handmade small-batch soap, made the slow way in Johnson County, Texas.
+        Coconut oil and shea butter, scented with essential oils. Local pickup only.
+      </p>
+    </div>
+
+    <!-- Column 2: Explore (nav links from architecture) -->
+    <nav class="site-footer__col" aria-label="Footer navigation">
+      <h2 class="site-footer__heading">Explore</h2>
+      <ul class="site-footer__list">
+        <li><a class="site-footer__link" href="index.html">Home</a></li>
+        <li><a class="site-footer__link" href="shop.html">Shop</a></li>
+        <li><a class="site-footer__link" href="ingredients-allergens.html">Ingredients &amp; Allergens</a></li>
+        <li><a class="site-footer__link" href="request.html">Send a Request</a></li>
+      </ul>
+    </nav>
+
+    <!-- Column 3: Order & pickup (contact details from copy.json global) -->
+    <div class="site-footer__col">
+      <h2 class="site-footer__heading">Order &amp; pickup</h2>
+      <ul class="site-footer__list">
+        <li class="site-footer__item">
+          <!-- Email is live; prefilled subject helps triage. -->
+          <a class="site-footer__link" href="mailto:jelishayork439@gmail.com?subject=Soap%20order">jelishayork439@gmail.com</a>
+        </li>
+        <li class="site-footer__item">
+          <!-- Phone is a clearly-marked placeholder wired as a tel link until
+               the real number is added. -->
+          <a class="site-footer__link" href="tel:">[PHONE NUMBER: Jelisha to add]</a>
+        </li>
+        <li class="site-footer__item">Johnson County, TX. Local pickup only, no shipping</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Copyright (copy.json global.copyright) -->
+  <div class="site-footer__bottom">
+    <p>© 2026 Raw Soaps and Suds. Handmade in Johnson County, Texas.</p>
+  </div>
+</footer>
