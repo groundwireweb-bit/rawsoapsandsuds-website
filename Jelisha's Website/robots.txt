@@ -1,0 +1,7 @@
+# Domain is a placeholder (yourdomain.com) — project_brief.meta.domain is null.
+# Replace the Sitemap host once a real domain is set.
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://yourdomain.com/sitemap.xml

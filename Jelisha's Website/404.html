@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="That page went down the drain. Head back home or go meet the five handmade soaps from Raw Soaps and Suds.">
+  <title>Down the drain | Raw Soaps &amp; Suds</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Karla:wght@400;500;700&display=swap">
+
+  <link rel="stylesheet" href="globals/styles.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta name="robots" content="noindex, follow">
+</head>
+<body data-page="404">
+  <a class="skip-link" href="#main">Skip to the good stuff</a>
+
+  <nav class="site-nav" aria-label="Primary">
+    <div class="site-nav__inner">
+      <a class="site-nav__brand" href="index.html" aria-label="Raw Soaps and Suds, home">
+        <img class="site-nav__logo" src="assets/logo-mark.svg" alt="" width="40" height="40" onerror="this.style.display='none'">
+        <span class="site-nav__wordmark">Raw Soaps &amp; Suds</span>
+      </a>
+      <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav-menu" aria-label="Open menu">
+        <span class="site-nav__toggle-bar"></span><span class="site-nav__toggle-bar"></span><span class="site-nav__toggle-bar"></span>
+      </button>
+      <div class="site-nav__menu" id="site-nav-menu">
+        <ul class="site-nav__links">
+          <li><a class="site-nav__link" href="index.html" data-nav="home">Home</a></li>
+          <li><a class="site-nav__link" href="shop.html" data-nav="shop">The Bars</a></li>
+          <li><a class="site-nav__link" href="ingredients-allergens.html" data-nav="ingredients">What's In 'Em</a></li>
+          <li><a class="site-nav__link" href="request.html" data-nav="request">Order</a></li>
+        </ul>
+        <a class="btn btn--primary site-nav__cta" href="request.html">Holler at Jelisha</a>
+      </div>
+    </div>
+  </nav>
+  <script>
+    (function () {
+      'use strict';
+      var nav = document.querySelector('.site-nav');
+      if (!nav) return;
+      var toggle = nav.querySelector('.site-nav__toggle');
+      var menu = nav.querySelector('.site-nav__menu');
+      function setMenu(open) {
+        menu.setAttribute('data-open', open ? 'true' : 'false');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      }
+      if (toggle && menu) {
+        toggle.addEventListener('click', function () { setMenu(toggle.getAttribute('aria-expanded') !== 'true'); });
+        menu.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') { setMenu(false); toggle.focus(); }
+        });
+      }
+      var current = document.body.getAttribute('data-page');
+      if (current) {
+        var active = nav.querySelector('.site-nav__link[data-nav="' + current + '"]');
+        if (active) active.setAttribute('aria-current', 'page');
+      }
+    })();
+  </script>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero__bubbles" aria-hidden="true">
+        <span class="hero__bubble" style="width:60px;height:60px;left:10%;top:26%;background:var(--sun);animation-delay:.1s"></span>
+        <span class="hero__bubble" style="width:44px;height:44px;left:20%;top:66%;background:var(--cherry);animation-delay:.3s"></span>
+        <span class="hero__bubble" style="width:70px;height:70px;right:9%;top:22%;background:var(--mango);animation-delay:.2s"></span>
+        <span class="hero__bubble" style="width:34px;height:34px;right:18%;top:70%;background:var(--leaf);animation-delay:.44s"></span>
+      </div>
+      <div class="container">
+        <div class="hero__inner">
+          <span class="eyebrow hero__eyebrow">Error 404</span>
+          <h1 class="hero__title">That page went <span class="pop pop--blue">down the drain.</span></h1>
+          <p class="hero__lead">We looked everywhere: under the sink, behind the curing rack, in the suds. It's gone. The soap, however, is right where you left it.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--lg" href="shop.html">Meet the bars</a>
+            <a class="btn btn--blue btn--lg" href="index.html">Back home</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner h-card">
+      <div class="site-footer__col">
+        <p class="site-footer__brand p-org p-name">Raw Soaps &amp; Suds</p>
+        <p class="site-footer__description">Fussy little bars of soap, made by hand in Johnson County, Texas. Coconut oil, shea butter, and a serious essential-oil habit. Local pickup only. No shipping, no fuss.</p>
+      </div>
+      <nav class="site-footer__col" aria-label="Footer navigation">
+        <h2 class="site-footer__heading">Wander</h2>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="index.html">Home</a></li>
+          <li><a class="site-footer__link" href="shop.html">The Bars</a></li>
+          <li><a class="site-footer__link" href="ingredients-allergens.html">What's In 'Em</a></li>
+          <li><a class="site-footer__link" href="request.html">Order</a></li>
+        </ul>
+      </nav>
+      <div class="site-footer__col">
+        <h2 class="site-footer__heading">Holler</h2>
+        <ul class="site-footer__list">
+          <li class="site-footer__item"><a class="site-footer__link u-email" href="mailto:jelishayork439@gmail.com?subject=Soap%20order">jelishayork439@gmail.com</a></li>
+          <li class="site-footer__item"><a class="site-footer__link p-tel" href="tel:">[PHONE NUMBER: Jelisha to add]</a></li>
+          <li class="site-footer__item p-adr"><span class="p-locality">Johnson County</span>, <span class="p-region">TX</span>. Pickup only, no shipping.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <p>© 2026 Raw Soaps &amp; Suds. Made by hand (and only two of them) in Johnson County, Texas.</p>
+    </div>
+  </footer>
+</body>
+</html>

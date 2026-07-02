@@ -1,0 +1,105 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Raw Soaps and Suds — Handmade Soap Scents",
+  "description": "Five handmade essential-oil bar soaps on a shared coconut oil and shea butter base. $4 per bar, or 3 for $10. Local pickup only in Johnson County, Texas.",
+  "itemListOrder": "https://schema.org/ItemListUnordered",
+  "numberOfItems": 5,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Product",
+        "name": "Mango Madness Soap Bar",
+        "description": "Bright and juicy, like ripe mango in the height of summer. Handmade on a coconut oil and shea butter base, scented with essential oils. $4 per bar, or 3 for $10.",
+        "category": "Handmade bar soap",
+        "brand": { "@type": "Brand", "name": "Raw Soaps and Suds" },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "USD",
+          "price": "4.00",
+          "availability": "https://schema.org/InStock",
+          "businessFunction": "http://purl.org/goodrelations/v1#Sell",
+          "description": "Order by email or phone for local pickup in Johnson County, Texas — no online checkout."
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Product",
+        "name": "Cherry Blossom Soap Bar",
+        "description": "Soft, floral, and a little sweet — like spring in bloom. Handmade on a coconut oil and shea butter base, scented with essential oils. $4 per bar, or 3 for $10.",
+        "category": "Handmade bar soap",
+        "brand": { "@type": "Brand", "name": "Raw Soaps and Suds" },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "USD",
+          "price": "4.00",
+          "availability": "https://schema.org/InStock",
+          "businessFunction": "http://purl.org/goodrelations/v1#Sell",
+          "description": "Order by email or phone for local pickup in Johnson County, Texas — no online checkout."
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Product",
+        "name": "Apple Fantasy Soap Bar",
+        "description": "Crisp and sweet, like fresh-picked orchard apples. Handmade on a coconut oil and shea butter base, scented with essential oils. $4 per bar, or 3 for $10.",
+        "category": "Handmade bar soap",
+        "brand": { "@type": "Brand", "name": "Raw Soaps and Suds" },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "USD",
+          "price": "4.00",
+          "availability": "https://schema.org/InStock",
+          "businessFunction": "http://purl.org/goodrelations/v1#Sell",
+          "description": "Order by email or phone for local pickup in Johnson County, Texas — no online checkout."
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "Product",
+        "name": "Perfect Patchouli Soap Bar",
+        "description": "Warm, earthy, and grounding — patchouli done right. Handmade on a coconut oil and shea butter base, scented with essential oils. $4 per bar, or 3 for $10.",
+        "category": "Handmade bar soap",
+        "brand": { "@type": "Brand", "name": "Raw Soaps and Suds" },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "USD",
+          "price": "4.00",
+          "availability": "https://schema.org/InStock",
+          "businessFunction": "http://purl.org/goodrelations/v1#Sell",
+          "description": "Order by email or phone for local pickup in Johnson County, Texas — no online checkout."
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "Product",
+        "name": "Eat Me Soap Bar",
+        "description": "Playful and a little mischievous. Handmade on a coconut oil and shea butter base, scented with essential oils. $4 per bar, or 3 for $10.",
+        "category": "Handmade bar soap",
+        "brand": { "@type": "Brand", "name": "Raw Soaps and Suds" },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "USD",
+          "price": "4.00",
+          "availability": "https://schema.org/InStock",
+          "businessFunction": "http://purl.org/goodrelations/v1#Sell",
+          "description": "Order by email or phone for local pickup in Johnson County, Texas — no online checkout."
+        }
+      }
+    }
+  ]
+}

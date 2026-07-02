@@ -1,0 +1,115 @@
+==============================================================
+INFO NEEDED FROM JELISHA — Raw Soaps and Suds website
+==============================================================
+Everything below is what's needed to finish and launch the site.
+Grouped by priority. Items 1-4 are placeholders that are live on
+the site right now and should be sorted before launch.
+
+
+--------------------------------------------------------------
+MUST HAVE BEFORE LAUNCH
+--------------------------------------------------------------
+
+1. PHONE NUMBER
+   - The footer of every page currently shows
+     "[PHONE NUMBER: Jelisha to add]" with a dead call link.
+   - Need: the real phone number to publish.
+   - Also confirm: is she OK publishing a phone number at all, or
+     would she rather be email-only? (If email-only, we remove the
+     phone line instead of filling it in.)
+
+2. DOMAIN NAME
+   - The whole site uses a placeholder web address
+     ("yourdomain.com") in its links and metadata.
+   - Need: the real domain she wants (e.g. rawsoapsandsuds.com),
+     OR confirmation she's fine with a free address like
+     something.netlify.app / something.github.io.
+
+3. EMAIL CONFIRMATION
+   - The site sends all orders/messages to:
+     jelishayork439@gmail.com
+   - Confirm: this is correct and she checks it regularly.
+
+4. CONFIRM THE CORE FACTS ARE STILL ACCURATE
+   - Pricing: $4 per bar, or 3 for $10 (mix and match)
+   - Pickup area: Johnson County, TX (site also names Cleburne
+     and Burleson) — local pickup only, no shipping
+   - The five scent names (see below)
+
+
+--------------------------------------------------------------
+ONE THING ONLY JELISHA CAN DO (order form activation)
+--------------------------------------------------------------
+
+5. ACTIVATE THE ORDER FORM
+   - The "Send a Request" form emails orders straight to her inbox.
+   - The FIRST time the form is used, she'll get a one-time
+     confirmation email and must click the activation link ONCE.
+   - Until she clicks it, form submissions won't arrive.
+   - Plan: test this together right after the site goes live.
+
+
+--------------------------------------------------------------
+CONTENT TO PERSONALIZE (can launch without, but better with)
+--------------------------------------------------------------
+
+6. SCENT DESCRIPTIONS
+   - All five descriptions are draft placeholders. Ask her to
+     approve or rewrite them in her own words — ESPECIALLY "Eat Me,"
+     which right now just says "Playful and a little mischievous."
+   - Scents to describe:
+       - Mango Madness
+       - Cherry Blossom
+       - Apple Fantasy
+       - Perfect Patchouli
+       - Eat Me   <-- needs real notes most of all
+
+
+--------------------------------------------------------------
+PHOTOS & ASSETS (optional, but a big visual upgrade)
+--------------------------------------------------------------
+
+7. FIVE SOAP PHOTOS
+   - Right now each soap shows a placeholder icon.
+   - Ask her for one clear photo of each bar. Roughly landscape,
+     about 1200 x 900 px is ideal (phone photos are fine).
+   - Files just get dropped into the assets/soaps/ folder using
+     these exact names and they appear automatically:
+       mango-madness.jpg
+       cherry-blossom.jpg
+       apple-fantasy.jpg
+       perfect-patchouli.jpg
+       eat-me.jpg
+
+8. LOGO (only if she wants one)
+   - She has no logo yet, so the site uses a text wordmark plus a
+     small bluebonnet stamp (looks intentional). Only needed if she
+     wants a custom logo made.
+
+9. ANYTHING ELSE SHE WANTS SHOWN?
+   - e.g. Instagram / Facebook links, or general availability for
+     pickup. The site has none of these now — ask if she wants any.
+
+
+--------------------------------------------------------------
+NOT JELISHA'S JOB (developer/launch tasks — don't ask her)
+--------------------------------------------------------------
+   - Buying/pointing the domain (DNS) and setting up hosting
+     (GitHub Pages, Netlify, etc.)
+   - Replacing "yourdomain.com" site-wide once the domain is set
+   - Choosing the URL scheme and submitting the sitemap to Google
+   (Full list is in handoff/launch_checklist.md)
+
+
+--------------------------------------------------------------
+SHORT VERSION TO TEXT/EMAIL HER
+--------------------------------------------------------------
+"Hey! To finish your soap website I need a few things:
+ 1) your business phone number for the site (or let me know if
+    you'd rather keep it email-only),
+ 2) whether you have a domain/web address in mind,
+ 3) a sentence describing each of the 5 scents — especially Eat Me,
+ 4) a photo of each soap bar.
+ Also, once the order form is live I'll need ~2 minutes of your
+ time to click a confirmation link so orders reach your inbox.
+ Thanks!"

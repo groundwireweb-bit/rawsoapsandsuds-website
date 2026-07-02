@@ -1,0 +1,34 @@
+<!-- ==========================================================================
+     Button component — Raw Soaps and Suds
+     Built by Agent 05. Styles live in globals/styles.css (.btn + modifiers).
+     All colors/spacing come from design_system.json via CSS custom properties.
+
+     Base class:   .btn
+     Color:        .btn--primary    (button_primary: solid bluebonnet blue)
+                   .btn--secondary  (button_secondary: outline)
+     Size:         .btn--sm | .btn--lg
+     Layout:       .btn--block      (full width)
+
+     Notes:
+       - Use <a class="btn ..."> for navigation/mailto/tel actions.
+       - Use <button class="btn ..."> for in-page JS actions.
+       - There is no add-to-cart on this site: order CTAs are mailto/tel links.
+     ========================================================================== -->
+
+<!-- Primary, used for the main order CTA -->
+<a class="btn btn--primary" href="mailto:jelishayork439@gmail.com?subject=Soap%20order">Email Jelisha to order</a>
+
+<!-- Secondary, used for lower-emphasis actions like browsing the catalog -->
+<a class="btn btn--secondary" href="shop.html">Shop the Soaps</a>
+
+<!-- Large primary, for hero placements -->
+<a class="btn btn--primary btn--lg" href="shop.html">Shop the Soaps</a>
+
+<!-- Small secondary -->
+<a class="btn btn--secondary btn--sm" href="ingredients-allergens.html">What's in every bar</a>
+
+<!-- Full-width primary, useful inside cards and the mobile nav -->
+<a class="btn btn--primary btn--block" href="mailto:jelishayork439@gmail.com?subject=Soap%20order">Email or call Jelisha to order</a>
+
+<!-- Button element variant, for any future in-page JS action -->
+<button class="btn btn--secondary" type="button">Toggle</button>

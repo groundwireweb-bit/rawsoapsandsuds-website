@@ -1,0 +1,187 @@
+{
+  "global": {
+    "business_name": "Raw Soaps and Suds",
+    "tagline": "Small-batch soap, handmade in Johnson County, Texas.",
+    "primary_cta_label": "Email Jelisha to order",
+    "secondary_cta_label": "Shop the Soaps",
+    "phone_display": "[PHONE NUMBER: Jelisha to add]",
+    "email_display": "jelishayork439@gmail.com",
+    "address_display": "Johnson County, Texas. Local pickup only, no shipping",
+    "copyright": "© 2026 Raw Soaps and Suds. Handmade in Johnson County, Texas."
+  },
+
+  "nav": {
+    "links": ["Home", "Shop", "Ingredients & Allergens", "Contact"],
+    "cta_button": "Order Soaps"
+  },
+
+  "footer": {
+    "description": "Handmade small-batch soap, made the slow way in Johnson County, Texas. Coconut oil and shea butter, scented with essential oils. Local pickup only.",
+    "links_column_1_heading": "Explore",
+    "links_column_2_heading": "Order & pickup",
+    "cta_heading": "Ready for a bar or three?",
+    "cta_body": "Email or call Jelisha with the scents you want and she'll arrange a local pickup in Johnson County, Texas.",
+    "cta_button": "Email Jelisha to order"
+  },
+
+  "pages": {
+    "home": {
+      "home_hero": {
+        "headline": "Handmade soap, made the slow way",
+        "subheadline": "Five small-batch scents on one simple base: coconut oil and shea butter, scented with essential oils, made by hand in Johnson County, Texas.",
+        "cta_primary": "Shop the Soaps",
+        "cta_secondary": "Email Jelisha to order"
+      },
+      "home_trust_bar": {
+        "items": [
+          "Handmade in Johnson County, TX",
+          "Coconut oil + shea butter base",
+          "Scented with essential oils",
+          "$4 a bar / 3 for $10",
+          "Local pickup"
+        ]
+      },
+      "home_services_summary": {
+        "heading": "Five scents, one gentle base",
+        "subheading": "Every bar starts from the same coconut oil and shea butter base, only the essential oils change. Mix and match your three.",
+        "items": [
+          { "name": "Mango Madness", "description": "Bright and juicy, like ripe mango in the height of summer." },
+          { "name": "Cherry Blossom", "description": "Soft, floral, and a little sweet, like spring in bloom." },
+          { "name": "Apple Fantasy", "description": "Crisp and sweet, like fresh-picked orchard apples." },
+          { "name": "Perfect Patchouli", "description": "Warm, earthy, and grounding, patchouli done right." },
+          { "name": "Eat Me", "description": "Playful and a little mischievous.", "_note_for_jelisha": "Expand this with the real scent notes when ready (e.g. the actual essential-oil blend). The short line stands on its own until then." }
+        ]
+      },
+      "home_ingredients_snippet": {
+        "heading": "What's in every bar",
+        "body": "Every bar shares the same base: coconut oil and shea butter, saponified with lye and scented with essential oils. The lye reacts away with the oils as the soap cures, so no active lye is left in the finished bar. Curious about the details or the allergen note?",
+        "cta": "What's in every bar"
+      },
+      "home_cta_strip": {
+        "heading": "No cart, no checkout, just email or call",
+        "subheading": "Tell Jelisha the scents and how many you'd like, and she'll set up a local pickup in Johnson County, Texas.",
+        "button": "Email Jelisha to order"
+      }
+    },
+
+    "shop": {
+      "shop_hero": {
+        "headline": "Shop the Soaps",
+        "subheadline": "Five small-batch scents, the same gentle coconut oil and shea butter base, different essential oils. There's no cart here. You reserve your scents by emailing or calling Jelisha for local pickup.",
+        "cta_primary": "Email Jelisha to order",
+        "cta_secondary": ""
+      },
+      "shop_pricing": {
+        "heading": "$4 per bar, or 3 for $10",
+        "subheading": "Mix and match scents. The price is the same across all five. No tiers, no packages, no hidden 'contact for price.'"
+      },
+      "shop_grid": {
+        "heading": "Pick your scents",
+        "subheading": "Same base, five different essential-oil blends. Reserve any three for the 3-for-$10 price.",
+        "items": [
+          { "name": "Mango Madness", "description": "Bright and juicy, like ripe mango in the height of summer." },
+          { "name": "Cherry Blossom", "description": "Soft, floral, and a little sweet, like spring in bloom." },
+          { "name": "Apple Fantasy", "description": "Crisp and sweet, like fresh-picked orchard apples." },
+          { "name": "Perfect Patchouli", "description": "Warm, earthy, and grounding, patchouli done right." },
+          { "name": "Eat Me", "description": "Playful and a little mischievous.", "_note_for_jelisha": "Expand this with the real scent notes when ready (e.g. the actual essential-oil blend). The short line stands on its own until then." }
+        ],
+        "card_cta": "Email or call Jelisha to order"
+      },
+      "shop_cta_strip": {
+        "heading": "Found your three?",
+        "subheading": "Email or call Jelisha with your scents and she'll confirm what's ready and arrange a pickup in Johnson County, Texas. Local pickup only, no shipping.",
+        "button": "Email Jelisha to order"
+      }
+    },
+
+    "ingredients-allergens": {
+      "ingredients_hero": {
+        "headline": "What's in every bar",
+        "subheadline": "Exactly what the soap is made of, in plain language, plus an honest word about lye and essential-oil sensitivities. No medical claims, no fine print.",
+        "cta_primary": "",
+        "cta_secondary": ""
+      },
+      "ingredients_base": {
+        "heading": "One simple base, five scents",
+        "body": "Every bar is made from the same base: coconut oil and shea butter, saponified with lye (sodium hydroxide), then scented with essential oils. That's the whole recipe, only the essential oils change from scent to scent.\n\nLye does the work that turns oils into soap. During saponification it reacts completely with the coconut oil and shea butter, and once the bars are cured, no active lye remains in the finished soap. That's how all traditional handmade bar soap is made.",
+        "cta": ""
+      },
+      "ingredients_allergens": {
+        "heading": "A word on allergens",
+        "body": "Every bar is scented with essential oils, and essential oils are a common sensitivity for some people. If you have a known fragrance or essential-oil allergy, reach out to Jelisha before you order and she'll talk you through the scents so you can pick one that works for you.",
+        "cta": "Email Jelisha about an allergy"
+      },
+      "ingredients_faq": {
+        "heading": "Questions buyers actually ask",
+        "items": [
+          {
+            "question": "Is there still lye in the finished soap?",
+            "answer": "No active lye remains. The lye reacts completely with the coconut oil and shea butter during saponification, and after the bars cure there's no active lye left in the finished soap."
+          },
+          {
+            "question": "What is the soap made of?",
+            "answer": "Coconut oil and shea butter, saponified with lye (sodium hydroxide), and scented with essential oils. Every bar shares that same base."
+          },
+          {
+            "question": "How much does a bar cost?",
+            "answer": "$4 per bar, or 3 for $10. Mix and match any of the five scents."
+          },
+          {
+            "question": "How do I order?",
+            "answer": "Email or call Jelisha with the scents and quantity you want. She confirms availability and your total, then you arrange a pickup time and place. See the Contact page for the steps."
+          },
+          {
+            "question": "Do you ship?",
+            "answer": "No, local pickup only in Johnson County, Texas. There's no shipping and no online checkout."
+          }
+        ]
+      },
+      "ingredients_cta_strip": {
+        "heading": "Still have an ingredient or allergy question?",
+        "subheading": "Email Jelisha before you order and she'll answer honestly. Local pickup in Johnson County, Texas, no shipping.",
+        "button": "Email before you order"
+      }
+    },
+
+    "contact": {
+      "contact_hero": {
+        "headline": "Order for local pickup",
+        "subheadline": "Ordering here is direct and personal. Email or call Jelisha, tell her the scents you want, and arrange a pickup. No cart, no checkout, no rush.",
+        "cta_primary": "Email Jelisha to order",
+        "cta_secondary": ""
+      },
+      "contact_methods": {
+        "heading": "Reach Jelisha",
+        "body": "Email is the easiest way to start an order, and it lands with a 'Soap order' subject so Jelisha can sort it quickly. Phone is on the way; the number below is a placeholder until it's added.",
+        "email_label": "Email",
+        "email_value": "jelishayork439@gmail.com",
+        "phone_label": "Call or text",
+        "phone_value": "[PHONE NUMBER: Jelisha to add]",
+        "cta": "Email Jelisha to order"
+      },
+      "contact_ordering_steps": {
+        "heading": "How ordering works",
+        "steps": [
+          { "number": "1", "title": "Tell Jelisha what you want", "description": "Email or call with the scent(s) and how many bars you'd like. Remember, 3 for $10." },
+          { "number": "2", "title": "She confirms it's ready", "description": "Jelisha checks availability and gives you the total. Nothing's locked in until you both agree." },
+          { "number": "3", "title": "Arrange your pickup", "description": "You settle on a time and place for local pickup in Johnson County, Texas. That's it." }
+        ]
+      },
+      "contact_service_area": {
+        "heading": "Where to pick up",
+        "body": "Raw Soaps and Suds is local pickup and in-person only in Johnson County, Texas, including nearby towns like Cleburne and Burleson. There's no shipping, and no street address is published; you'll arrange the exact pickup time and place with Jelisha when you order."
+      },
+      "contact_cta_strip": {
+        "heading": "Ready to order?",
+        "subheading": "Email or call Jelisha to place your local-pickup order. She'll take it from there.",
+        "button": "Email or call Jelisha to order"
+      }
+    }
+  },
+
+  "404": {
+    "heading": "That page slipped down the drain",
+    "body": "The page you're after isn't here, but the soaps still are. Head back home or go straight to the five scents.",
+    "cta": "Shop the Soaps"
+  }
+}

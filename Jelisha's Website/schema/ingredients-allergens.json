@@ -1,0 +1,48 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "name": "Ingredients & Allergens — Raw Soaps and Suds",
+  "url": "https://yourdomain.com/ingredients-allergens",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is there still lye in the finished soap?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No active lye remains. The lye reacts completely with the coconut oil and shea butter during saponification, and after the bars cure there's no active lye left in the finished soap."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the soap made of?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Coconut oil and shea butter, saponified with lye (sodium hydroxide), and scented with essential oils. Every bar shares that same base."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a bar cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "$4 per bar, or 3 for $10 — mix and match any of the five scents."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I order?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Email or call Jelisha with the scents and quantity you want. She confirms availability and your total, then you arrange a pickup time and place. See the Contact page for the steps."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you ship?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — local pickup only in Johnson County, Texas. There's no shipping and no online checkout."
+      }
+    }
+  ]
+}
