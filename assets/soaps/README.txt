@@ -8,11 +8,10 @@ Until a photo exists, the card shows a small placeholder icon instead.
 
 File names (must match exactly, all lowercase, .jpg):
 
-    mango-madness.jpg      -> Mango Madness
-    cherry-blossom.jpg     -> Cherry Blossom
-    apple-fantasy.jpg      -> Apple Fantasy
-    perfect-patchouli.jpg  -> Perfect Patchouli
-    eat-me.jpg             -> Eat Me
+    tangerine.jpg      -> Tangerine
+    beautiful.jpg      -> Beautiful
+    bliss.jpg          -> Bliss
+    orange-blast.jpg   -> Orange Blast
 
 Tips:
 - Roughly landscape works best (the frame is 4:3, e.g. 1200 x 900 px). Other
