@@ -501,6 +501,13 @@ textarea.input { resize: vertical; min-height: 110px; }
 .field__hint { font-size: var(--text-sm); color: color-mix(in srgb, var(--ink) 62%, transparent); }
 .form-note { margin-top: var(--space-5); text-align: center; font-size: var(--text-sm); }
 .form-note a { color: var(--blue); font-weight: 700; text-decoration: underline; }
+.form-status {
+  margin-top: var(--space-5); padding: 12px 14px;
+  border: var(--outline); border-radius: 12px;
+  box-shadow: var(--shadow-press); font-weight: 700;
+}
+.form-status[data-state="ok"] { background: var(--mango); color: var(--ink); }
+.form-status[data-state="error"] { background: var(--paper); color: var(--ink); }
 
 /* --------------------------------------------------------------------------
    17. Footer

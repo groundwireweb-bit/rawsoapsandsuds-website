@@ -88,17 +88,14 @@
     </section>
 
     <!-- ===== Form =====
-         Submits via FormSubmit.co straight to Jelisha's email, no backend or
-         build step, so it works on any static host.
-         ONE-TIME SETUP: the first submission triggers a FormSubmit confirmation
-         email; Jelisha must click its activation link once to start delivery.
-         TODO(deploy): to change where orders go, edit the form "action" below. -->
+         Submits to a Google Apps Script web app that emails the order straight
+         to Jelisha's Gmail. No third-party relay, no build step; works on any
+         static host (Cloudflare Pages).
+         SETUP: deploy backend/order-mailer.gs, then paste its /exec URL into
+         ORDER_ENDPOINT in the script at the bottom of this page. -->
     <section class="section section--paper">
       <div class="container">
-        <form class="panel request-form" action="https://formsubmit.co/jelishayork439@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="New soap order from the website">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
+        <form class="panel request-form" id="order-form" action="mailto:jelishayork439@gmail.com" method="POST">
           <!-- Honeypot: hidden from people, tempting to bots; keeps spam out. -->
           <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
 
@@ -129,6 +126,7 @@
           </div>
 
           <button class="btn btn--primary btn--lg btn--block" type="submit">Send it to Jelisha</button>
+          <p class="form-status" id="order-status" role="status" aria-live="polite" hidden></p>
         </form>
 
         <p class="form-note">Rather not use a form? Email <a href="mailto:jelishayork439@gmail.com?subject=Soap%20order">jelishayork439@gmail.com</a> and Jelisha will take it from there.</p>
@@ -161,6 +159,58 @@
       </div>
     </section>
   </main>
+
+  <script>
+    (function () {
+      'use strict';
+
+      // Paste the Apps Script Web app URL (ends in /exec) here after deploying
+      // backend/order-mailer.gs. Until then, the form falls back to email.
+      var ORDER_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwj4uAlAfMGoopLQKlYrci6bGE3hSsHqU6gGWbf6XjHri_KtPukts-BGdX5adiTjVzGIQ/exec';
+
+      var form = document.getElementById('order-form');
+      var status = document.getElementById('order-status');
+      if (!form) return;
+
+      var button = form.querySelector('button[type="submit"]');
+
+      function showStatus(message, ok) {
+        if (!status) return;
+        status.textContent = message;
+        status.hidden = false;
+        status.setAttribute('data-state', ok ? 'ok' : 'error');
+      }
+
+      // If the endpoint isn't set yet, leave the native form behaviour alone.
+      if (ORDER_ENDPOINT.indexOf('http') !== 0) return;
+      form.setAttribute('action', ORDER_ENDPOINT);
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+
+        var original = button ? button.textContent : '';
+        if (button) { button.disabled = true; button.textContent = 'Sending...'; }
+        if (status) status.hidden = true;
+
+        // no-cors keeps Apps Script from tripping CORS; we can't read the
+        // response, so we treat a completed request as success. The email is
+        // best-effort and Jelisha replies to confirm regardless.
+        fetch(ORDER_ENDPOINT, {
+          method: 'POST',
+          mode: 'no-cors',
+          body: new FormData(form)
+        }).then(function () {
+          form.reset();
+          showStatus("Sent! Your order's on its way to Jelisha. She'll write back soon to confirm.", true);
+        }).catch(function () {
+          showStatus("Hmm, that didn't send. Please email jelishayork439@gmail.com and Jelisha will sort you out.", false);
+        }).then(function () {
+          if (button) { button.disabled = false; button.textContent = original; }
+        });
+      });
+    })();
+  </script>
 
   <footer class="site-footer">
     <div class="site-footer__inner h-card">
