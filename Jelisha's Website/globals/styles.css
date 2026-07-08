@@ -15,7 +15,7 @@
   --ink: #20223F;          /* deep indigo text + printed outlines/shadows */
   --blue: #3B4CC0;         /* bright bluebonnet cobalt — primary */
   --blue-deep: #2A3690;    /* pressed/hover blue */
-  --mango: #FF7A2F;        /* signature accent (Mango Madness) */
+  --mango: #FF7A2F;        /* signature accent (juicy citrus orange) */
   --cherry: #EA4E86;       /* berry pink */
   --leaf: #2FA36B;         /* fresh green */
   --sun: #FFC53D;          /* bubble/highlight yellow */
@@ -340,6 +340,15 @@ strong { font-weight: 700; }
 .trust-bar__item::before { content: "✺"; color: var(--sun); font-size: 1.1em; }
 
 /* --------------------------------------------------------------------------
+   9b. Notice bar — "new batch on the way" strip on Home + The Bars.
+   TODO(go-live): delete this block (and the .notice-bar sections in
+   index.html + shop.html) once the new lineup is ready to order,
+   around the week of August 3, 2026.
+   -------------------------------------------------------------------------- */
+.notice-bar { background: var(--sun); border-block: 2.5px solid var(--ink); padding-block: var(--space-4); text-align: center; }
+.notice-bar__text { font-weight: 700; font-size: var(--text-sm); max-width: 72ch; margin-inline: auto; padding-inline: var(--space-4); }
+
+/* --------------------------------------------------------------------------
    10. Scent cards — hand-applied fruit-label stickers
    -------------------------------------------------------------------------- */
 .scent-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-8) var(--space-6); }
@@ -362,12 +371,11 @@ strong { font-weight: 700; }
   box-shadow: 10px 12px 0 var(--accent);
 }
 
-/* per-scent accents (content-justified: five real scents) */
-.scent-card--mango { --accent: var(--mango); }
-.scent-card--cherry { --accent: var(--cherry); }
-.scent-card--apple { --accent: var(--leaf); }
-.scent-card--patchouli { --accent: var(--blue); }
-.scent-card--eatme { --accent: var(--sun); }
+/* per-scent accents (content-justified: four real scents) */
+.scent-card--tangerine { --accent: var(--mango); }
+.scent-card--beautiful { --accent: var(--cherry); }
+.scent-card--bliss { --accent: var(--blue); }
+.scent-card--orange-blast { --accent: var(--sun); }
 
 .scent-card__frame {
   position: relative;
